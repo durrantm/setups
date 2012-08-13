@@ -12,6 +12,7 @@ alias h='history | tail'
 alias hg='history | grep'
 alias mv='mv -i' 
 alias zap='rm -i'
+alias nhistory="history | tr -s ' ' | cut -d' ' -f3-"
 #
 # One letter quickies:
 alias p='pwd'
