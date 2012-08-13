@@ -22,6 +22,11 @@ alias x='exit'
 alias s='cd ..'
 alias play='cd ~/play/'
 
+# color (for ubuntu)
+if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+  export TERM=xterm-256color
+fi
+
 # Rails
 alias src='script/rails console'
 alias srs='script/rails server'
