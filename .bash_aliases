@@ -5,18 +5,16 @@
 alias la='ls -A' 
 alias l='ls -alFtr' 
 alias lsd='ls -d .*' 
-alias lsp='ls -prune'
 
 # Various
 alias h='history | tail'
 alias hg='history | grep'
 alias mv='mv -i' 
 alias zap='rm -i'
-alias nhistory="history | tr -s ' ' | cut -d' ' -f3-"
-#
 # One letter quickies:
 alias p='pwd'
 alias x='exit'
+alias {ack,ak}='ack-grep'
 
 # Directories
 alias s='cd ..'
@@ -32,7 +30,8 @@ alias src='script/rails console'
 alias srs='script/rails server'
 alias raked='rake db:drop db:create db:migrate db:seed' 
 alias rvm-restart='source '\''/home/durrantm/.rvm/scripts/rvm'\'''
-alias rrg='rake routes | grep'
+alias rrg='rake routes | grep '
+alias rspecd='rspec --drb '
 #
 # DropBox - syncd
 WORKBASE="~/Dropbox/97_2012/work"
@@ -41,42 +40,32 @@ alias code="cd $WORKBASE/ror/code"
 #
 # DropNot - NOT syncd !
 WORKBASE_GIT="~/Dropnot"
-alias dropnot="cd $WORKBASE_GIT"
-alias webs="cd $WORKBASE_GIT/webs"
-alias setups="cd $WORKBASE_GIT/setups_and_docs"
-alias docs="cd $WORKBASE_GIT/setups_and_docs"
-alias linker="cd $WORKBASE_GIT/webs/rails_v3/linker"
+alias {dropnot,not}="cd $WORKBASE_GIT"
+alias {webs,ww}="cd $WORKBASE_GIT/webs"
+alias {setups,docs}="cd $WORKBASE_GIT/setups_and_docs"
+alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_v3/linker"
 #
 # git
-alias gsta='git status'
-alias gadd='git add '
-alias gcom='git commit'
-alias gpul='git pull '
-alias gpus='git push '
-alias gbra='git branch'
-alias gche='git checkout '
-alias gchm='git checkout master'
+alias {gsta,gst}='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
+alias {gbra,gb}='git branch'
+alias {gco,go}='git checkout'
+alias {gcob,gob}='git checkout -b '
+alias {gadd,ga}='git add '
+alias {gcom,gc}='git commit'
+alias {gpul,gl}='git pull '
+alias {gpus,gh}='git push '
+alias glom='git pull origin master'
+alias ghom='git push origin master'
+alias gg='git grep '
 #
 # vim
 alias v='vim'
 #
 # tmux
-alias ton='tmux set -g mode-mouse on'
-alias tof='tmux set -g mode-mouse off'
+alias {ton,tn}='tmux set -g mode-mouse on'
+alias {tof,tf}='tmux set -g mode-mouse off'
+#
 # dmc
-alias dmc='cd ~/dmc'
-alias wf='cd /Users/durrantm/dmc/dmWorkflow' # wf for Workflow
-alias ws='cd /Users/durrantm/dmc/dmStaffing' # ws for Staffing
-alias wd='cd /Users/durrantm/dmc/teacher_eval' # wd for Develop
-#
-# tmux Terminal Multiplexer
-alias tmux='/opt/bin/tmux'
-#
-# Rails, clear the database for running tests.
-alias dbp='rake db:test:prepare'
-#
-# Rails run tests with spork using --drb
-alias rspecd='rspec --drb ' 
-#
-# foreman, uses port 5000 and redis
-alias fs='foreman start'
+alias {dmc,dm}='cd ~/Dropnot/webs/rails_v3/dmc/'
+alias wf='cd ~/Dropnot/webs/rails_v3/dmc/dmWorkflow'
+alias ws='cd ~/Dropnot/webs/rails_v3/dmc/dmStaffing'
