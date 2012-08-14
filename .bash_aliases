@@ -43,7 +43,7 @@ WORKBASE_GIT="~/Dropnot"
 alias {dropnot,not}="cd $WORKBASE_GIT"
 alias {webs,ww}="cd $WORKBASE_GIT/webs"
 alias {setups,docs}="cd $WORKBASE_GIT/setups_and_docs"
-alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_v3/linker"
+alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_aps/linker"
 #
 # git
 alias {gsta,gst}='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
@@ -66,6 +66,6 @@ alias {ton,tn}='tmux set -g mode-mouse on'
 alias {tof,tf}='tmux set -g mode-mouse off'
 #
 # dmc
-alias {dmc,dm}='cd ~/Dropnot/webs/rails_v3/dmc/'
-alias wf='cd ~/Dropnot/webs/rails_v3/dmc/dmWorkflow'
-alias ws='cd ~/Dropnot/webs/rails_v3/dmc/dmStaffing'
+alias {dmc,dm}='cd ~/Dropnot/webs/rails_apps/dmc/'
+alias wf='cd ~/Dropnot/webs/rails_apps/dmc/dmWorkflow'
+alias ws='cd ~/Dropnot/webs/rails_apps/dmc/dmStaffing'
