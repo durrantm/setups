@@ -15,15 +15,16 @@ alias zap='rm -i'
 alias p='pwd'
 alias x='exit'
 alias {ack,ak}='ack-grep'
+alias ba='. ~/.bash_aliases'
 
 # Directories
 alias s='cd ..'
 alias play='cd ~/play/'
 
 # color (for ubuntu)
-if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
-  export TERM=xterm-256color
-fi
+#if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+#  export TERM=xterm-256color
+#fi
 
 # Rails
 alias src='script/rails console'
@@ -43,7 +44,7 @@ WORKBASE_GIT="~/Dropnot"
 alias {dropnot,not}="cd $WORKBASE_GIT"
 alias {webs,ww}="cd $WORKBASE_GIT/webs"
 alias {setups,docs}="cd $WORKBASE_GIT/setups_and_docs"
-alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_aps/linker"
+alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_apps/linker"
 #
 # git
 alias {gsta,gst}='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
@@ -57,6 +58,7 @@ alias {gpus,gh}='git push '
 alias glom='git pull origin master'
 alias ghom='git push origin master'
 alias gg='git grep '
+alias gri='git rebase -i HEAD~10'
 #
 # vim
 alias v='vim'
