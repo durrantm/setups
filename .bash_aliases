@@ -3,8 +3,8 @@
 # ls variants
 #alias l='ls -CF' 
 alias la='ls -A' 
-alias l='ls -alFtr' 
-alias lsd='ls -d .*' 
+alias l='ls -alFtrG' 
+alias lsd='ls -Fd .*' 
 
 # Various
 alias h='history | tail'
@@ -48,17 +48,23 @@ alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_apps/linker"
 #
 # git
 alias {gsta,gst}='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
+alias {gss,gs}='git status --short'
 alias {gbra,gb}='git branch'
 alias {gco,go}='git checkout'
 alias {gcob,gob}='git checkout -b '
 alias {gadd,ga}='git add '
 alias {gcom,gc}='git commit'
-alias {gpul,gl}='git pull '
-alias {gpus,gh}='git push '
-alias glom='git pull origin master'
-alias ghom='git push origin master'
+alias gpull='git pull '
+alias gm='git merge '
+alias gpush='git push '
+alias gpullom='git pull origin master'
+alias gpushom='git push origin master'
 alias gg='git grep '
-alias gri='git rebase -i HEAD~10'
+alias glp='git log --patch ' # git info for a single file.
+alias glps='git log --path --stat'
+alias gls="git log -S '" # Search for content, e.g. css
+alias glsd='git log --simplify_by_decoration 'i # Last commit for each branch
+alias glsd='git log --all --simplify_by_decoration 'i # Last commit for wall branches
 #
 # vim
 alias v='vim'
