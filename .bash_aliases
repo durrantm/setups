@@ -1,7 +1,6 @@
 # ~/.bash_aliases
 
 # ls variants
-#alias l='ls -CF' 
 alias la='ls -A' 
 alias l='ls -alFtrG' 
 alias lsd='ls -Fd .*' 
