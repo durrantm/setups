@@ -63,6 +63,7 @@ alias glps='git log --path --stat'
 alias gls="git log -S '" # Search for content, e.g. css
 alias glsd='git log --simplify_by_decoration 'i # Last commit for each branch
 alias glsd='git log --all --simplify_by_decoration 'i # Last commit for wall branches
+>>>>>>> 3c9764fcc5fda4c48181c02f8ad2b7cb72414e43
 #
 # vim
 alias v='vim'
