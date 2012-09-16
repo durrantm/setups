@@ -21,14 +21,10 @@ alias ba='. ~/.bash_aliases'
 alias s='cd ..'
 alias play='cd ~/play/'
 
-# color (for ubuntu)
-#if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
-#  export TERM=xterm-256color
-#fi
-
 # Rails
 alias src='script/rails console'
 alias srs='script/rails server'
+alias srst='script/rails server thin'
 alias raked='rake db:drop db:create db:migrate db:seed' 
 alias rvm-restart='source '\''/home/durrantm/.rvm/scripts/rvm'\'''
 alias rrg='rake routes | grep '
@@ -43,8 +39,8 @@ alias code="cd $WORKBASE/ror/code"
 WORKBASE_GIT="~/Dropnot"
 alias {dropnot,not}="cd $WORKBASE_GIT"
 alias {webs,ww}="cd $WORKBASE_GIT/webs"
-alias {setups,docs}="cd $WORKBASE_GIT/setups_and_docs"
-alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_apps/linker"
+alias {setups,docs}="cd $WORKBASE_GIT/setups"
+alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_v3/linker"
 #
 # git
 alias {gsta,gst}='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
@@ -59,6 +55,7 @@ alias glom='git pull origin master'
 alias ghom='git push origin master'
 alias gg='git grep '
 alias gri='git rebase -i HEAD~10'
+alias grh='git reset --hard '
 #
 # vim
 alias v='vim'
@@ -68,6 +65,6 @@ alias {ton,tn}='tmux set -g mode-mouse on'
 alias {tof,tf}='tmux set -g mode-mouse off'
 #
 # dmc
-alias {dmc,dm}='cd ~/Dropnot/webs/rails_apps/dmc/'
-alias wf='cd ~/Dropnot/webs/rails_apps/dmc/dmWorkflow'
-alias ws='cd ~/Dropnot/webs/rails_apps/dmc/dmStaffing'
+alias {dmc,dm}='cd ~/Dropnot/webs/rails_v3/dmc/'
+alias wf='cd ~/Dropnot/webs/rails_v3/dmc/dmWorkflow'
+alias ws='cd ~/Dropnot/webs/rails_v3/dmc/dmStaffing'
