@@ -86,6 +86,14 @@ xterm*|rxvt*)
     ;;
 esac
 
+function parse_git_branch () {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+GREEN="\[\033[0;32m\]"
+NO_COLOUR="\[\033[0m\]"
+PS1="\[\e[1;91m\][\u@\h \w]\[\e[0m\]$GREEN\$(parse_git_branch)$NO_COLOUR\n\$ "
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -94,11 +102,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
