@@ -1,32 +1,29 @@
-# ~/.bash_aliases
-# One letter quickies:
-alias p='pwd'
-alias h='history | tail'
-alias x='exit'
-alias l='ls -alFtrG'
-alias s='cd ..'
-alias g='git status'
-# Various
+# ls variants
+#alias l='ls -CF'
 alias la='ls -A'
+alias l='ls -alFtrG'
 alias lsd='ls -Fd .*'
+
+# Various
+alias h='history | tail'
 alias hg='history | grep'
 alias mv='mv -i'
-alias mvv='mv -iv'
-alias rm='rm -I' # prompt if more than 3 files
 alias zap='rm -i'
-alias vl='vi `ls -t | head -1`' # edit last file
+# One letter quickies:
+alias p='pwd'
+alias x='exit'
 alias {ack,ak}='ack-grep'
 alias ba='. ~/.bash_aliases'
-alias ggg='alias | grep "^alias g"'
-alias cdb='cd -'
-alias cdu='cd ..'
-alias cpr='cp -r'
-alias cpv='cp -v'
-alias bwcat="/bin/cat"
-alias ccat="source-highlight --out-format=esc -o STDOUT -i"
+alias hon='shopt -s histverify'
+alias hof='shopt -u histverify'
+
+# Directories
+alias s='cd ..'
+alias play='cd ~/play/'
+
 # color (for ubuntu)
 #if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
-#  export TERM=xterm-256color
+# export TERM=xterm-256color
 #fi
 
 # Rails
@@ -40,15 +37,8 @@ alias rspecd='rspec --drb '
 # DropBox - syncd
 alias box="~/Dropbox"
 WORKBASE="~/Dropbox/96_2013/work"
-CODEBASE="$WORKBASE/code"
-RUBYCODEBASE="$CODEBASE/ruby__rails"
 alias work="cd $WORKBASE"
-alias {play,code}="cd $CODEBASE/"
-alias {rubycode,rcd}="cd $RUBYCODEBASE/ruby"
-alias {ruby_quiz,rubyquiz,rq}="cd $RUBYCODEBASE/ruby/best_of_ruby_quiz"
-alias {railscode,ror}="cd $RUBYCODEBASE/rails/"
-alias dmc="cd $RUBYCODEBASE/rails/dmc"
-alias zc="cd $RUBYCODEBASE/rails/zipcar"
+alias code="cd $WORKBASE/ror/code"
 #
 # DropNot - NOT syncd !
 WORKBASE_GIT="~/Dropnot"
@@ -59,23 +49,33 @@ alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_apps/linker"
 alias mdd="cd $WORKBASE_GIT/webs/michaeldurrant.com"
 #
 # git
-alias gst='git status -sb' # Warning: gst conflicts with gnu-smalltalk (when used).
+alias {g,gs,gst}='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
 alias gb='git branch'
 alias gco='git checkout'
 alias gcob='git checkout -b '
+alias gf='git fetch'
 alias ga='git add '
 alias gc='git commit'
+alias gcv='git comit' # This is a git alias for git -v commit. Mispell of 'comit' is intentional.
+alias gpull='git pull '
 alias gm='git merge '
-alias gpl='git pull '
-alias gplom='git pull origin master'
-alias gps='git push '
-alias gpsom='git push origin master'
+alias gpush='git push '
+alias gpullom='git pull origin master'
+alias gpushom='git push origin master'
 alias gg='git grep '
-alias grv='git remote -v'
-alias gls="git log -S '" # Search for content, e.g. css
-alias gcv='git comit' # This is a git alias for git -v commit. Mispell of 'comit' is intentional see git config below.
-# git aliases
-git config --global alias.comit 'commit -v'
+alias gl='git log --pretty=oneline'
+alias gls='git log --pretty=oneline | head -8'
+alias glp='git log --patch ' # git info for a single file.
+alias glps='git log --path --stat'
+alias glss="git log -S '" # Search for content, e.g. css
+alias glsd='git log --simplify_by_decoration 'i # Last commit for each branch
+alias glsd='git log --all --simplify_by_decoration 'i # Last commit for all branches
+alias {gal,ggg}='alias | grep "^alias g"'
+alias grm='git reset --hard origin/master'
+alias gfrm='git fetch; git reset --hard origin/master'
+alias grs='git reset --hard origin/staging'
+alias gfrs='git fetch; git reset --hard origin/staging'
+#
 # vim
 alias v='vim'
 #
@@ -83,3 +83,13 @@ alias v='vim'
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
 #
+# zipcar
+alias zx='cd ~/zipcar'
+alias zrc='cd ~/zipcar/zipcar-rails-core'
+alias zra='cd ~/zipcar/zipcar-rails-admin-api'
+alias ra='cd ~/zipcar/reservations-api'
+alias ru='cd ~/zipcar/reservations-ui'
+alias dummy='cd /Users/mdurrant/zipcar/zipcar-rails-core/spec/dummy'
+
+# git aliases
+git config --global alias.comit 'commit -v'
