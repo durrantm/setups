@@ -1,15 +1,25 @@
-# ls variants
-#alias l='ls -CF'
-alias la='ls -A'
-alias l='ls -alFtrG'
-alias lsd='ls -Fd .*'
-# Various
+WORKBASE="~/Dropbox/95_2014/work"
+WORKBASE_GIT="~/Dropnot"
 # One letter quickies:
+alias a='git add '
+alias b="cd -"
+alias c="cd $WORKBASE/code"
+alias d="~/Dropbox"
+alias f='git fetch'
+alias g='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
 alias h='history | tail -15'
-alias hg='history | tail -200 | grep '
+alias l='ls -alFtrG'
+alias m='git fetch; git reset --hard origin/master'
+alias n="cd $WORKBASE_GIT" # dropNot
 alias p='pwd'
+alias s='git fetch; git reset --hard origin/staging'
+alias t='rspec spec' # 't'est
+alias v='vim'
+alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
+alias z='cd ~/zipcar'
 # Other:
+alias hg='history | tail -200 | grep '
 alias hga='history | grep' # All history
 alias mv='mv -i'
 alias zap='rm -i'
@@ -18,16 +28,10 @@ alias ba='. ~/.bash_aliases'
 alias hon='shopt -s histverify' # For scrolling back
 alias hof='shopt -u histverify'
 alias cpv='cp -v'
-
-# Directories
-alias s='cd ..'
+alias la='ls -A'
+alias lsd='ls -Fd .*'
 alias play='cd ~/play/'
-
-# color (for ubuntu)
-#if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
-# export TERM=xterm-256color
-#fi
-
+alias mdd="cd $WORKBASE_GIT/webs/michaeldurrant.com"
 # Rails
 alias src='script/rails console'
 alias srs='script/rails server'
@@ -35,28 +39,15 @@ alias raked='rake db:drop db:create db:migrate db:seed'
 alias rvm-restart='source '\''/home/durrantm/.rvm/scripts/rvm'\'''
 alias rrg='rake routes | grep '
 alias rspecd='rspec --drb '
-#
 # DropBox - syncd
-alias box="~/Dropbox"
-WORKBASE="~/Dropbox/96_2013/work"
 alias work="cd $WORKBASE"
-alias code="cd $WORKBASE/ror/code"
-#
 # DropNot - NOT syncd !
-WORKBASE_GIT="~/Dropnot"
-alias {dropnot,not}="cd $WORKBASE_GIT"
-alias {webs,ww}="cd $WORKBASE_GIT/webs"
 alias {setups,docs}="cd $WORKBASE_GIT/setups"
 alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_apps/linker"
-alias mdd="cd $WORKBASE_GIT/webs/michaeldurrant.com"
-#
 # git
-alias {g,gs,gst}='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
 alias gb='git branch'
 alias gco='git checkout'
 alias gcob='git checkout -b '
-alias gf='git fetch'
-alias ga='git add '
 alias gc='git commit'
 alias gcv='git comit' # This is a git alias for git -v commit. Mispell of 'comit' is intentional.
 alias gpull='git pull '
@@ -74,26 +65,17 @@ alias glsd='git log --simplify_by_decoration 'i # Last commit for each branch
 alias glsd='git log --all --simplify_by_decoration 'i # Last commit for all branches
 alias {gal,ggg}='alias | grep "^alias g"'
 alias grm='git reset --hard origin/master'
-alias gfrm='git fetch; git reset --hard origin/master'
-alias grs='git reset --hard origin/staging'
-alias gfrs='git fetch; git reset --hard origin/staging'
-#
-# vim
-alias v='vim'
-#
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
 #
 # zipcar
-alias zx='cd ~/zipcar'
 alias zrc='cd ~/zipcar/zipcar-rails-core'
 alias zra='cd ~/zipcar/zipcar-rails-admin-api'
 alias ra='cd ~/zipcar/reservations-api'
 alias ru='cd ~/zipcar/reservations-ui'
 alias dummy='cd /Users/mdurrant/zipcar/zipcar-rails-core/spec/dummy'
-alias ssh20='ssh uscamwebq20.boston.zipcar.com'
-alias ssh96='ssh uscamwebd96.boston.zipcar.com'
-
+alias s20='ssh uscamwebq20.boston.zipcar.com'
+alias s96='ssh uscamwebd96.boston.zipcar.com'
 # git aliases
 git config --global alias.comit 'commit -v'
