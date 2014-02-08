@@ -3,19 +3,21 @@
 alias la='ls -A'
 alias l='ls -alFtrG'
 alias lsd='ls -Fd .*'
-
 # Various
-alias h='history | tail'
-alias hg='history | grep'
-alias mv='mv -i'
-alias zap='rm -i'
 # One letter quickies:
+alias h='history | tail -15'
+alias hg='history | tail -200 | grep '
 alias p='pwd'
 alias x='exit'
+# Other:
+alias hga='history | grep' # All history
+alias mv='mv -i'
+alias zap='rm -i'
 alias {ack,ak}='ack-grep'
 alias ba='. ~/.bash_aliases'
-alias hon='shopt -s histverify'
+alias hon='shopt -s histverify' # For scrolling back
 alias hof='shopt -u histverify'
+alias cpv='cp -v'
 
 # Directories
 alias s='cd ..'
@@ -90,6 +92,8 @@ alias zra='cd ~/zipcar/zipcar-rails-admin-api'
 alias ra='cd ~/zipcar/reservations-api'
 alias ru='cd ~/zipcar/reservations-ui'
 alias dummy='cd /Users/mdurrant/zipcar/zipcar-rails-core/spec/dummy'
+alias ssh20='ssh uscamwebq20.boston.zipcar.com'
+alias ssh96='ssh uscamwebd96.boston.zipcar.com'
 
 # git aliases
 git config --global alias.comit 'commit -v'

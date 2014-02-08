@@ -2,10 +2,8 @@
 
 MY_SNAP=96 # <-- Change this if the db snap number changes !!!!
 
-ORACLE_CONNECT_APP="zipcar/nokia548@snap$MY_SNAP"
-ORACLE_CONNECT="zipcar_base/nokia548@snap$MY_SNAP"
-
-export ORACLE_BASE="zipcar_base/nokia548@snap$MY_SNAP"
+export ORACLE_SPARSE="zipcar_base/nokia548@snap$MY_SNAP"
+export ORACLE_LUSH="zipcar/nokia548@snap$MY_SNAP"
 
 export ORACLE_DEV_USERNAME=zipcar
 export ORACLE_DEV_PASSWORD=nokia548
