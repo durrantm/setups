@@ -12,6 +12,7 @@ alias l='ls -alFtrG'
 alias m='git fetch; git reset --hard origin/master'
 alias n="cd $WORKBASE_GIT" # dropNot
 alias p='pwd'
+alias q="cd $WORKBASE/code/ruby__rails/ruby/ruby_quiz"
 alias r='rspec spec' # 't'est
 alias s='git fetch; git reset --hard origin/staging'
 alias v='vim'
