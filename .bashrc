@@ -86,13 +86,21 @@ xterm*|rxvt*)
     ;;
 esac
 
-function parse_git_branch () {
+# Add -v as a 'default' to git commit
+git () {
+  if [[ $1 = commit ]]
+  then
+    command git commit -v "${@:2}"
+  else
+    command git "$@"
+  fi
+}
+
+parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-GREEN="\[\033[0;32m\]"
-NO_COLOUR="\[\033[0m\]"
-PS1="\[\e[1;91m\][\u@\h \w]\[\e[0m\]$GREEN\$(parse_git_branch)$NO_COLOUR\n\$ "
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(parse_git_branch)\n\$ '
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
