@@ -9,10 +9,8 @@ alias f='git fetch'
 alias g='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
 alias h='history | tail -15'
 alias l='ls -alFtrG'
-alias m='git fetch; git reset --hard origin/master'
 alias n="cd $WORKBASE_GIT" # dropNot
 alias p='pwd'
-alias q="cd $WORKBASE/code/ruby__rails/ruby/ruby_quiz"
 alias r='rspec spec' # 't'est
 alias s='git fetch; git reset --hard origin/staging'
 alias v='vim'
@@ -51,6 +49,7 @@ alias gco='git checkout'
 alias gcob='git checkout -b '
 alias gc='git commit'
 alias gcv='git comit' # This is a git alias for git -v commit. Mispell of 'comit' is intentional.
+alias gf='git fetch'
 alias gpull='git pull '
 alias gm='git merge '
 alias gpush='git push '
@@ -66,17 +65,22 @@ alias glsd='git log --simplify_by_decoration 'i # Last commit for each branch
 alias glsd='git log --all --simplify_by_decoration 'i # Last commit for all branches
 alias {gal,ggg}='alias | grep "^alias g"'
 alias grm='git reset --hard origin/master'
+alias grs='git reset --hard origin/staging'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
 #
 # zipcar
-alias zrc='cd ~/zipcar/zipcar-rails-core'
-alias zra='cd ~/zipcar/zipcar-rails-admin-api'
-alias ra='cd ~/zipcar/reservations-api'
-alias ru='cd ~/zipcar/reservations-ui'
-alias dummy='cd /Users/mdurrant/zipcar/zipcar-rails-core/spec/dummy'
-alias s20='ssh uscamwebq20.boston.zipcar.com'
-alias s96='ssh uscamwebd96.boston.zipcar.com'
+ZIPCAR_BASE='~/zipcar'
+alias zrc="cd $ZIPCAR_BASE/zipcar-rails-core"
+alias zag="cd $ZIPCAR_BASE/zipcar-auth-gem"
+alias zra="cd $ZIPCAR_BASE/zipcar-rails-admin-api"
+alias ra="cd $ZIPCAR_BASE/reservations-api"
+alias ru="cd $ZIPCAR_BASE/reservations-ui"
+alias dummy="cd $ZIPCAR_BASE/zipcar-rails-core/spec/dummy"
+alias s20="ssh uscamwebq20.boston.zipcar.com"
+alias s96="ssh uscamwebd96.boston.zipcar.com"
+alias auto="cd $ZIPCAR_BASE/qa/ui_auto"
+
 # git aliases
 git config --global alias.comit 'commit -v'
