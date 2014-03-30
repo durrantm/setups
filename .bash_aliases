@@ -1,7 +1,7 @@
 WORKBASE="~/Dropbox/95_2014/work"
 WORKBASE_GIT="~/Dropnot"
 # One letter quickies:
-alias a='git add '
+alias a='. ~/.bash_aliases'
 alias b="cd -"
 alias c="cd $WORKBASE/code"
 alias d="~/Dropbox"
@@ -9,27 +9,28 @@ alias f='git fetch'
 alias g='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
 alias h='history | tail -15'
 alias l='ls -alFtrG'
-alias m='git fetch; git reset --hard origin/master'
 alias n="cd $WORKBASE_GIT" # dropNot
 alias p='pwd'
 alias q="cd $WORKBASE/code/ruby__rails/ruby/ruby_quiz"
-alias r='rspec spec' # 't'est
+alias r='rspec spec'
 alias s='git fetch; git reset --hard origin/staging'
-alias v='vim'
+alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
 alias z='cd ~/zipcar'
-# Other:
+# Two letter:
 alias hg='history | tail -200 | grep '
-alias hga='history | grep' # All history
+alias la='ls -A'
+alias le='less '
 alias mv='mv -i'
+# Other:
+alias hga='history | grep' # All history
+alias mvv='mv -iv'
 alias zap='rm -i'
 alias {ack,ak}='ack-grep'
-alias ba='. ~/.bash_aliases'
 alias hon='shopt -s histverify' # For scrolling back
 alias hof='shopt -u histverify'
 alias cpv='cp -v'
-alias la='ls -A'
 alias lsd='ls -Fd .*'
 alias play='cd ~/play/'
 alias mdd="cd $WORKBASE_GIT/webs/michaeldurrant.com"
@@ -46,6 +47,7 @@ alias work="cd $WORKBASE"
 alias {setups,docs}="cd $WORKBASE_GIT/setups"
 alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_apps/linker"
 # git
+alias ga='git add '
 alias gb='git branch'
 alias gco='git checkout'
 alias gcob='git checkout -b '
