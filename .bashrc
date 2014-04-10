@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 # don't put duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth:erasedups # erasedups so I only have unique entries 4/7/2014
 shopt -s histappend
 HISTSIZE=100000
 HISTFILESIZE=200000
@@ -43,6 +43,9 @@ fi
 shopt -s autocd
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
+fi
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
 fi
 # 10/22/2013 md will make a directory and cd into it!  Also will make intermediate directories.
 md () { mkdir -p "$@" && cd "$@"; }
