@@ -21,6 +21,7 @@ alias z='cd ~/zipcar'
 # Two letter:
 alias hg='history | tail -200 | grep '
 alias la='ls -A'
+alias ll='ls -al'
 alias le='less '
 alias mv='mv -i'
 # Other:
@@ -34,6 +35,11 @@ alias cpv='cp -v'
 alias lsd='ls -Fd .*'
 alias play='cd ~/play/'
 alias mdd="cd $WORKBASE_GIT/webs/michaeldurrant.com"
+#color
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 # Rails
 alias src='script/rails console'
 alias srs='script/rails server'
