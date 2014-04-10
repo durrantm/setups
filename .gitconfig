@@ -1,0 +1,13 @@
+[user]
+	email = m2@snap2web.com\n
+	name = Michael Durrant
+[core]
+	excludesfile = /home/durrantm/.gitignore_global
+	editor = vim -f
+[color]
+	ui = true
+[alias]
+	comit = commit -v
+	ci = commit -v
+[diff]
+  external = /usr/local/bin/git-diff.sh
