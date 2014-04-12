@@ -46,14 +46,16 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 # Automatic CD'ing
-#shopt -s autocd
+[ "${BASH_VERSINFO[0]}" -ge 4 ] && shopt -s autocd
+# Bash completion
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+# Git completion
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
-# 10/22/13 md will make a directory and cd into it! Will include dirs
+# 10/22/13 function "md dirname" will make & cd into a directory called dirname Includes dirs
 md () { mkdir -p "$@" && cd "$@"; }
 [ -z "$TMUX" ] && export TERM=xterm-256color
 export EDITOR=vim
