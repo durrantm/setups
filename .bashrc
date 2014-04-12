@@ -35,7 +35,7 @@ parse_git_branch () {
 TIME='\033[01;31m\]\t\033[00m\]:'
 USER='\[\033[02;32m\]\u\033[00m\]:\033[02;36m\]\h:\033[01;34m\]'
 LOCATION='`pwd | sed "s#\(/[^/]\+/[^/]\+/[^/]\+/\).*\(/[^/]\+/[^/]\+\)/\?#\1...\2#g"`'
-BRANCH='\033[00m\]:\033[01;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
+BRANCH='\033[00m\]:\033[00;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
 PS1=$TIME$USER$LOCATION$BRANCH
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 if [ -f ~/.bash_aliases ]; then
