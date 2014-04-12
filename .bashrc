@@ -32,7 +32,8 @@ git () {
 parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
-COLON='\033[00m\]:'
+#COLON='\033[00m\]:'
+COLON=' '
 TIME='\033[01;31m\]\t'$COLON
 USER='\033[02;32m\]\u'$COLON
 HOST='\033[02;36m\]\h'$COLON'\033[01;34m\]'
