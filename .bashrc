@@ -66,7 +66,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # mdd Terminal Multiplexor 6/15/2012
 if [[ ! $TERM =~ screen ]]; then
   if [ -n "$(type -P tmux)" ]; then
-    echo '.'
     exec tmux
   fi
 fi
