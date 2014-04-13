@@ -1,5 +1,5 @@
 [user]
-	email = m2@snap2web.com\n
+	email = m2@snap2web.com
 	name = Michael Durrant
 [core]
 	excludesfile = /home/durrantm/.gitignore_global
@@ -11,3 +11,5 @@
 	ci = commit -v
 [diff]
   external = /usr/local/bin/git-diff.sh
+[push]
+	default = current
