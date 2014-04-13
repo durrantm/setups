@@ -79,10 +79,10 @@ alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
 # zipcar
 ZIPCAR_BASE='~/zipcar'
-alias zrc="cd $ZIPCAR_BASE/zipcar-rails-core"
+alias zaa="cd $ZIPCAR_BASE/zipcar-rails-admin-api"
 alias zag="cd $ZIPCAR_BASE/zipcar-auth-gem"
-alias zra="cd $ZIPCAR_BASE/zipcar-rails-admin-api"
 alias zra="cd $ZIPCAR_BASE/reservations-api"
+alias zrc="cd $ZIPCAR_BASE/zipcar-rails-core"
 alias zrt="cd $ZIPCAR_BASE/tools"
 alias zru="cd $ZIPCAR_BASE/reservations-ui"
 alias dummy="cd $ZIPCAR_BASE/zipcar-rails-core/spec/dummy"
