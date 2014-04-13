@@ -77,14 +77,18 @@ alias grm='git reset --hard origin/master'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
-#
 # zipcar
-alias zrc='cd ~/zipcar/zipcar-rails-core'
-alias zra='cd ~/zipcar/zipcar-rails-admin-api'
-alias ra='cd ~/zipcar/reservations-api'
-alias ru='cd ~/zipcar/reservations-ui'
-alias dummy='cd /Users/mdurrant/zipcar/zipcar-rails-core/spec/dummy'
-alias s20='ssh uscamwebq20.boston.zipcar.com'
-alias s96='ssh uscamwebd96.boston.zipcar.com'
+ZIPCAR_BASE='~/zipcar'
+alias zrc="cd $ZIPCAR_BASE/zipcar-rails-core"
+alias zag="cd $ZIPCAR_BASE/zipcar-auth-gem"
+alias zra="cd $ZIPCAR_BASE/zipcar-rails-admin-api"
+alias zra="cd $ZIPCAR_BASE/reservations-api"
+alias zrt="cd $ZIPCAR_BASE/tools"
+alias zru="cd $ZIPCAR_BASE/reservations-ui"
+alias dummy="cd $ZIPCAR_BASE/zipcar-rails-core/spec/dummy"
+alias s20="ssh uscamwebq20.boston.zipcar.com"
+alias s96="ssh uscamwebd96.boston.zipcar.com"
+alias auto="cd $ZIPCAR_BASE/qa/ui_auto"
+#
 # git aliases
 git config --global alias.comit 'commit -v'
