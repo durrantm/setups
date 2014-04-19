@@ -5,8 +5,7 @@ HISTCONTROL=ignoreboth:erasedups # erasedups so I only have unique entries 4/7/2
 shopt -s histappend
 HISTSIZE=100000
 HISTFILESIZE=200000
-# check the window size after each command and, if necessary,
-shopt -s checkwinsize
+shopt -s checkwinsize # check the window size after each command and, if necessary,
 cdc() {
   for fn in "$@"; do
     source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn;
@@ -17,7 +16,7 @@ alias cat='cdc' # Put this alias here to be next the cdc definition above.
 gd() {
    git diff -r --color=always "$@"
 }
-# make less more friendly for non-text input files, see lesspipe(1)
+# make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 # Add -v as a 'default' to git commit
 git () {
@@ -45,22 +44,17 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-# Automatic CD'ing
-[ "${BASH_VERSINFO[0]}" -ge 4 ] && shopt -s autocd
-# Bash completion
+[ "${BASH_VERSINFO[0]}" -ge 4 ] && shopt -s autocd # Automatic CD'ing
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-# Git completion
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
-# 10/22/13 function "md dirname" will make & cd into a directory called dirname Includes dirs
-md () { mkdir -p "$@" && cd "$@"; }
+md () { mkdir -p "$@" && cd "$@"; } # 10/22/13 function "md dirname" will make & cd into it
 [ -z "$TMUX" ] && export TERM=xterm-256color
 export EDITOR=vim
-# mdd 8/3/13 vi at the command line
-set -o vi
+set -o vi # mdd 8/3/13 vi at the command line
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 # mdd Terminal Multiplexor 6/15/2012
@@ -69,5 +63,6 @@ if [[ ! $TERM =~ screen ]]; then
     exec tmux
   fi
 fi
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/2014
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
