@@ -42,6 +42,7 @@ if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash; fi
 # 10/22/13 function "md dirname" will make & cd into a directory called dirname Includes dirs
 md () { mkdir -p "$@" && cd "$@"; }
 [ -z "$TMUX" ] && export TERM=xterm-256color
+if ls --color=auto -d / >/dev/null 2>&1; then alias ls='ls --color=auto'; fi
 export EDITOR=vim
 set -o vi # mdd 8/3/13 vi at the command line
 ### Added by the Heroku Toolbelt
