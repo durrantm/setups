@@ -9,27 +9,27 @@ alias f='git fetch'
 alias g='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
 alias h='history | tail -15'
 alias l='ls -alFtrG'
+alias m="cd $WORKBASE_GIT/webs/michaeldurrant.com"
 alias n="cd $WORKBASE_GIT" # dropNot
 alias p='pwd'
 alias q="cd $WORKBASE/code/ruby__rails/ruby/ruby_quiz"
 alias r='rspec spec'
-alias s='git fetch; git reset --hard origin/staging'
+alias s="cd $WORKBASE_GIT/setups"
 alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
 alias z='cd ~/zipcar'
 # Two letter:
-alias hg='history | tail -200 | grep '
+alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
 alias mv='mv -i'
 # Other:
-alias hga='history | grep' # All history
+alias hga='history | grep -i' # All history
 alias mvv='mv -iv'
 alias rmi='rm -i'
 alias rmv='rm -v'
 alias rmiv='rm -iv'
-alias {ack,ak}='ack-grep'
 alias hon='shopt -s histverify' # For scrolling back
 alias hof='shopt -u histverify'
 alias cpr='cp -r'
@@ -39,19 +39,16 @@ alias lsd='ls -Fd .*'
 alias lsd1='ls -d1 '
 alias ldl='ls -d1'
 alias play='cd ~/play/'
-alias mdd="cd $WORKBASE_GIT/webs/michaeldurrant.com"
 # Rails
-alias src='script/rails console'
-alias srs='script/rails server'
+alias rc='rails console'
+alias rs='rails server'
 alias raked='rake db:drop db:create db:migrate db:seed'
 alias rvm-restart='source '\''/home/durrantm/.rvm/scripts/rvm'\'''
-alias rrg='rake routes | grep '
 alias rspecd='rspec --drb '
 # DropBox - syncd
 alias work="cd $WORKBASE"
 # DropNot - NOT syncd !
-alias {setups,docs}="cd $WORKBASE_GIT/setups"
-alias {linker,lnk}="cd $WORKBASE_GIT/webs/rails_apps/linker"
+alias lnk="cd $WORKBASE_GIT/webs/rails_apps/linker"
 # git
 alias ga='git add '
 alias gb='git branch'
@@ -73,7 +70,7 @@ alias glps='git log --path --stat'
 alias glss="git log -S '" # Search for content, e.g. css
 alias glsd='git log --simplify_by_decoration 'i # Last commit for each branch
 alias glsda='git log --all --simplify_by_decoration 'i # Last commit for all branches
-alias {gal,ggg}='alias | grep "^alias g"'
+alias gits='alias | grep "^alias g"'
 alias grm='git reset --hard origin/master'
 alias gfrm='git fetch; git reset --hard origin/master'
 alias grs='git reset --hard origin/staging'
