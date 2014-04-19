@@ -10,10 +10,6 @@ cdc() {
   done
 }
 alias cat='cdc' # Put this alias here to be next the cdc definition above.
-# color for git diff
-gd() {
-   git diff -r --color=always "$@"
-}
 # make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 # Add -v as a 'default' to git commit
