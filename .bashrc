@@ -10,10 +10,11 @@ cdc() {
   done
 }
 alias cat='cdc' # Put this alias here to be next the cdc definition above.
+# color for git diff
 gd() {
    git diff -r --color=always "$@"
 }
-# make less more friendly for non-text input files, see lesspipe(1)
+# make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 # Add -v as a 'default' to git commit
 git () {
@@ -46,13 +47,15 @@ if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash; fi
 md () { mkdir -p "$@" && cd "$@"; }
 [ -z "$TMUX" ] && export TERM=xterm-256color
 export EDITOR=vim
-set -o vi
+set -o vi # mdd 8/3/13 vi at the command line
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+# mdd Terminal Multiplexor 6/15/2012
 if [[ ! $TERM =~ screen ]]; then
   if [ -n "$(type -P tmux)" ]; then
     exec tmux
   fi
 fi
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/2014
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
