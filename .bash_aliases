@@ -62,12 +62,9 @@ alias gpush='git push '
 alias gpullom='git pull origin master'
 alias gpushom='git push origin master'
 alias gg='git grep '
-alias gl='git log --pretty=oneline'
-alias gls='git log --pretty=oneline | head -8'
-alias glp='git log --patch ' # git info for 1 file.
-alias glps='git log --path --stat'
-alias glss="git log -S '" # Search for content
-alias glsd='git log --simplify_by_decoration 'i # Last commit for each branch
+alias gl='git log --pretty=oneline | head -8'
+alias gla='git log --pretty=oneline' # a=all
+alias gls="git log -S '" # Search for content
 alias gits='alias | grep "^alias g"'
 alias grm='git reset --hard origin/master'
 alias gfrm='git fetch; git reset --hard origin/master'
