@@ -64,7 +64,6 @@ alias gpushom='git push origin master'
 alias gg='git grep '
 alias gl='git log --pretty=oneline | head -8'
 alias gla='git log --pretty=oneline' # a=all
-alias gls="git log -S '" # Search for content
 alias gits='alias | grep "^alias g"'
 alias grm='git reset --hard origin/master'
 alias gfrm='git fetch; git reset --hard origin/master'
