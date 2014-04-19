@@ -6,7 +6,7 @@ alias b="cd -"
 alias c="cd $WORKBASE/code"
 alias d="~/Dropbox"
 alias f='git fetch'
-alias g='git status' # Warning: gst conflicts with gnu-smalltalk (when used).
+alias g='git status'
 alias h='history | tail -15'
 alias l='ls -alFtrG'
 alias m="cd $WORKBASE_GIT/webs/michaeldurrant.com"
@@ -42,9 +42,6 @@ alias play='cd ~/play/'
 # Rails
 alias rc='rails console'
 alias rs='rails server'
-alias raked='rake db:drop db:create db:migrate db:seed'
-alias rvm-restart='source '\''/home/durrantm/.rvm/scripts/rvm'\'''
-alias rspecd='rspec --drb '
 # DropBox - syncd
 alias work="cd $WORKBASE"
 # DropNot - NOT syncd !
@@ -55,8 +52,7 @@ alias gb='git branch'
 alias gco='git checkout'
 alias gcob='git checkout -b '
 alias gc='git commit'
-alias gd='git diff'
-alias gcv='git comit' # This is a git alias for git -v commit. Mispell of 'comit' is intentional.
+alias gcv='git comit' # This is a git alias for git -v commit. Mispell intentional.
 alias gf='git fetch'
 alias gpull='git pull '
 alias gpush='git push '
@@ -65,16 +61,16 @@ alias gpushom='git push origin master'
 alias gg='git grep '
 alias gl='git log --pretty=oneline'
 alias gls='git log --pretty=oneline | head -8'
-alias glp='git log --patch ' # git info for a single file.
+alias glp='git log --patch ' # git info for 1 file.
 alias glps='git log --path --stat'
-alias glss="git log -S '" # Search for content, e.g. css
+alias glss="git log -S '" # Search for content
 alias glsd='git log --simplify_by_decoration 'i # Last commit for each branch
-alias glsda='git log --all --simplify_by_decoration 'i # Last commit for all branches
 alias gits='alias | grep "^alias g"'
 alias grm='git reset --hard origin/master'
 alias gfrm='git fetch; git reset --hard origin/master'
 alias grs='git reset --hard origin/staging'
 alias gfrs='git fetch; git reset --hard origin/staging'
+alias gd='git diff'
 alias gdt='git difftool '
 alias gdtd='git difftool -d'
 alias gm='git merge '
@@ -82,7 +78,6 @@ alias gmt='git mergetool'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
-#
 # zipcar
 ZIPCAR_BASE='~/zipcar'
 alias zaa="cd $ZIPCAR_BASE/zipcar-rails-admin-api"
@@ -96,6 +91,5 @@ alias s20="ssh uscamwebq20.boston.zipcar.com"
 alias s96="ssh uscamwebd96.boston.zipcar.com"
 alias qa="cd $ZIPCAR_BASE/tools/qa/ui_auto"
 alias auto="cd $ZIPCAR_BASE/tools/qa/ui_auto"
-
 # git aliases
 git config --global alias.comit 'commit -v'
