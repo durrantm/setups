@@ -25,13 +25,11 @@ parse_git_branch () {
 }
 COLON=' ' # was '\033[00m\]:'
 TIME='\033[01;31m\]\t'$COLON
-# moved to .tmux.conf USER='\033[02;32m\]\u'$COLON
-# HOST='\033[02;36m\]\h'$COLON
-# LOCATION='\033[01;34m\]`pwd | sed "s#\(/[^/]\+/[^/]\+/[^/]\+/\).*\(/[^/]\+/[^/]\+\)/\?#\1_\2#g"`'
-LOCATION='\033[01;32m\]$(echo $PWD)'
+HOST='\033[02;36m\]\h'$COLON
+LOCATION='\033[01;34m\]`pwd | sed "s#\(/[^/]\+/[^/]\+/[^/]\+/\).*\(/[^/]\+/[^/]\+\)/\?#\1_\2#g"`'
+# LOCATION='\033[01;32m\]$(echo $PWD)'
 BRANCH=$COLON'\033[00;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
-#PS1=$TIME$USER$HOST$LOCATION$BRANCH
-PS1=$TIME$LOCATION$BRANCH
+PS1=$TIME$USER$HOST$LOCATION$BRANCH
 PS2='\[\033[01;36m\]>'
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
