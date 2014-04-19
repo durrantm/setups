@@ -32,7 +32,7 @@ BRANCH=$COLON'\033[00;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
 PS1=$TIME$USER$HOST$LOCATION$BRANCH
 PS2='\[\033[01;36m\]>'
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
+[ -f ~/.bash_aliases ] && source ~/.bash_aliases
 # Automatic CD'ing
 [ "${BASH_VERSINFO[0]}" -ge 4 ] && shopt -s autocd
 # Bash completion
