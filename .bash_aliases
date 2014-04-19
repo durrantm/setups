@@ -40,6 +40,8 @@ alias lsd1='ls -d1 '
 alias ldl='ls -d1'
 alias play='cd ~/play/'
 alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 # Rails
 alias rc='rails console'
 alias rs='rails server'
