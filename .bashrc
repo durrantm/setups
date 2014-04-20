@@ -11,9 +11,9 @@ cdc() {
 }
 alias cat='cdc' # Put this alias here to be next to the cdc definition above.
 HOST='\033[02;36m\]\h'
+HOST=' '$HOST
 if ls --version 2>/dev/null | grep -q 'coreutils'; then
   alias ls='ls --color=always'
-  HOST=' '$HOST
 else
   alias ls='ls -G'
 fi
