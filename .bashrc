@@ -39,12 +39,9 @@ PS1=$TIME$USER$HOST$LOCATION$BRANCH
 PS2='\[\033[01;36m\]>'
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
-# Automatic CD'ing
 [ "${BASH_VERSINFO[0]}" -ge 4 ] && shopt -s autocd
-# Bash completion
+[ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then . /etc/bash_completion; fi
-# Git completion
-if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash; fi
 # 10/22/13 function "md dirname" will make & cd into a directory called dirname Includes dirs
 md () { mkdir -p "$@" && cd "$@"; }
 [ -z "$TMUX" ] && export TERM=xterm-256color
