@@ -24,6 +24,9 @@ alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
 alias mv='mv -i'
+# Easy update of .bashrc and .bash_aliases
+alias bup='cp ~/.bashrc ~/Dropnot/setups; cd ~/Dropnot/setups; git add .bashrc; git commit -m".bashrc update"; git push origin master;'
+alias bap='cp ~/.bash_aliases ~/Dropnot/setups; cd ~/Dropnot/setups; git add .bash_aliases; git commit -m"Aliases update"; git push origin master;'
 # Other:
 alias hga='history | grep -i' # All history
 alias mvv='mv -iv'
