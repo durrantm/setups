@@ -26,10 +26,9 @@ git () { [ $1 = commit ] && command git commit -v "${@:2}" || command git "$@"
 # For the PS1 prompt...
 parse_git_branch () { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 } # keep this '}' on a newline.
-COLON=' ' # was '\033[00m\]:'
 TIME='\033[01;31m\]\t \033[01;32m\]'
 LOCATION=' \033[01;34m\]`pwd | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g"`'
-BRANCH=$COLON'\033[00;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
+BRANCH=' \033[00;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
 PS1=$TIME$USER$HOST$LOCATION$BRANCH
 PS2='\[\033[01;36m\]>'
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
