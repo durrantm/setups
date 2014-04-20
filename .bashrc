@@ -10,10 +10,12 @@ cdc() {
   done
 }
 alias cat='cdc' # Put this alias here to be next the cdc definition above.
+HOST='\033[02;36m\]\h'
 if ls --version 2>/dev/null | grep -q 'coreutils'; then
-    alias ls='ls --color=always'
+  alias ls='ls --color=always'
+  HOST=' '$HOST
 else
-    alias ls='ls -G'
+  alias ls='ls -G'
 fi
 # make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -29,10 +31,8 @@ parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 COLON=' ' # was '\033[00m\]:'
-TIME='\033[01;31m\]\t'$COLON'\033[01;32m\]'
-HOST=$COLON'\033[02;36m\]\h'
-LOCATION=$COLON'\033[01;34m\]`pwd | sed "s#\(/[^/]\+/[^/]\+/[^/]\+/\).*\(/[^/]\+/[^/]\+\)/\?#\1_\2#g"`'
-# LOCATION='\033[01;32m\]$(echo $PWD)'
+TIME='\033[01;31m\]\t \033[01;32m\]'
+LOCATION=' \033[01;34m\]`pwd | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g"`'
 BRANCH=$COLON'\033[00;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
 PS1=$TIME$USER$HOST$LOCATION$BRANCH
 PS2='\[\033[01;36m\]>'
