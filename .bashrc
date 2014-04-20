@@ -10,6 +10,11 @@ cdc() {
   done
 }
 alias cat='cdc' # Put this alias here to be next the cdc definition above.
+if ls --version 2>/dev/null | grep -q 'coreutils'; then
+    alias ls='ls --color=always'
+else
+    alias ls='ls -G'
+fi
 # make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 # Add -v as a 'default' to git commit
