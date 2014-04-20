@@ -30,7 +30,7 @@ parse_git_branch () {
 }
 COLON=' ' # was '\033[00m\]:'
 TIME='\033[01;31m\]\t'$COLON'\033[01;32m\]'
-HOST=' \033[02;36m\]\h'$COLON
+HOST='\033[02;36m\]\h'$COLON
 LOCATION='\033[01;34m\]`pwd | sed "s#\(/[^/]\+/[^/]\+/[^/]\+/\).*\(/[^/]\+/[^/]\+\)/\?#\1_\2#g"`'
 # LOCATION='\033[01;32m\]$(echo $PWD)'
 BRANCH=$COLON'\033[00;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
