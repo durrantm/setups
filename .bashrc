@@ -17,6 +17,7 @@ if ls --version 2>/dev/null | grep -q 'coreutils'; then
 else
   alias ls='ls -G'
 fi
+not='~/Dropnot/'
 # make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 # Add -v as a 'default' to git commit
