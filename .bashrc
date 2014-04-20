@@ -9,7 +9,7 @@ cdc() {
     source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn;
   done
 }
-alias cat='cdc' # Put this alias here to be next the cdc definition above.
+alias cat='cdc' # Put this alias here to be next to the cdc definition above.
 HOST='\033[02;36m\]\h'
 if ls --version 2>/dev/null | grep -q 'coreutils'; then
   alias ls='ls --color=always'
@@ -17,20 +17,15 @@ if ls --version 2>/dev/null | grep -q 'coreutils'; then
 else
   alias ls='ls -G'
 fi
-not='~/Dropnot/'
+export not='~/Dropnot/'
 # make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 # Add -v as a 'default' to git commit
-git () {
-  if [[ $1 = commit ]]
-  then command git commit -v "${@:2}"
-  else command git "$@"
-  fi
-}
+git () { [ $1 = commit ] && command git commit -v "${@:2}" || command git "$@"
+} # keep separate
 # For the PS1 prompt...
-parse_git_branch () {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
-}
+parse_git_branch () { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+} # keep this '}' on a newline.
 COLON=' ' # was '\033[00m\]:'
 TIME='\033[01;31m\]\t \033[01;32m\]'
 LOCATION=' \033[01;34m\]`pwd | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g"`'
@@ -42,19 +37,13 @@ alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)
 [ "${BASH_VERSINFO[0]}" -ge 4 ] && shopt -s autocd
 [ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
 [ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
-# 10/22/13 function "md dirname" will make & cd into a directory called dirname Includes dirs
 md () { mkdir -p "$@" && cd "$@"; }
 [ -z "$TMUX" ] && export TERM=xterm-256color
 export EDITOR=vim
 set -o vi # mdd 8/3/13 vi at the command line
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-# mdd Terminal Multiplexor 6/15/2012
-if [[ ! $TERM =~ screen ]]; then
-  if [ -n "$(type -P tmux)" ]; then
-    exec tmux
-  fi
-fi
+[[ ! $TERM =~ screen ]] && [ -n "$(type -P tmux)" ] && exec tmux
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/2014
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM as a function
