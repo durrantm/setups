@@ -4,28 +4,17 @@ HISTSIZE=100000
 HISTFILESIZE=200000
 shopt -s histappend
 shopt -s checkwinsize
-cdc() {
-  for fn in "$@"; do
-    source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn;
-  done
-}
-alias cat='cdc' # Put this alias here to be next to the cdc definition above.
+cdc() { for fn in "$@"; do source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn; done; }
+alias cat='cdc' # Keeo this alias here next to the cdc definition above.
 HOST='\033[02;36m\]\h'
 HOST=' '$HOST
-if ls --version 2>/dev/null | grep -q 'coreutils'; then
-  alias ls='ls --color=always'
-else
-  alias ls='ls -G'
+if ls --version 2>/dev/null | grep -q 'coreutils'; then alias ls='ls --color=always'
+else alias ls='ls -G'
 fi
 export not='~/Dropnot/'
-# make less more friendly for non-text input files
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-# Add -v as a 'default' to git commit
-git () { [ $1 = commit ] && command git commit -v "${@:2}" || command git "$@"
-} # keep separate
-# For the PS1 prompt...
-parse_git_branch () { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
-} # keep this '}' on a newline.
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # make less more friendly for non-text input files
+git () { [ $1 = commit ] && command git commit -v "${@:2}" || command git "$@"; }
+parse_git_branch () { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'; }
 TIME='\033[01;31m\]\t \033[01;32m\]'
 LOCATION=' \033[01;34m\]`pwd | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g"`'
 BRANCH=' \033[00;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
