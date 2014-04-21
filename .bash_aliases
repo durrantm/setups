@@ -25,10 +25,10 @@ alias la='ls -A'
 alias le='less '
 alias mv='mv -i'
 # Easy update of .bashrc and .bash_aliases
-alias bup='cp ~/.bashrc ~/Dropnot/setups; cd ~/Dropnot/setups; git add .bashrc; git commit -m".bashrc update"; git push origin master;'
-alias aup='cp ~/.bash_aliases ~/Dropnot/setups; cd ~/Dropnot/setups; git add .bash_aliases; git commit -m".bash aliases update"; git push origin master;'
-alias bdown='cd ~/Dropnot/setups; git pull; cp ~/Dropnot/setups/.bashrc ~; . ~/.bashrc'
-alias adown='cd ~/Dropnot/setups; git pull; cp ~/Dropnot/setups/.bash_aliases ~; . ~/.bash_aliases'
+alias bup='cp ~/.bashrc ~/Dropnot/setups; cd ~/Dropnot/setups; git add .bashrc; git commit -m".bashrc update"; git push origin master; cd -'
+alias aup='cp ~/.bash_aliases ~/Dropnot/setups; cd ~/Dropnot/setups; git add .bash_aliases; git commit -m".bash aliases update"; git push origin master; cd -'
+alias bdown='cd ~/Dropnot/setups; git pull; cp ~/Dropnot/setups/.bashrc ~; . ~/.bashrc; cd -'
+alias adown='cd ~/Dropnot/setups; git pull; cp ~/Dropnot/setups/.bash_aliases ~; . ~/.bash_aliases; cd -'
 # Other:
 alias hga='history | grep -i' # All history
 alias mvv='mv -iv'
