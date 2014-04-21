@@ -5,7 +5,7 @@ HISTFILESIZE=200000
 shopt -s histappend
 shopt -s checkwinsize
 cdc() { for fn in "$@"; do source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn; done; }
-alias cat='cdc' # Keeo this alias here next to the cdc definition above.
+alias cat='cdc' # Keeo this alias here next to the cdc definition above
 HOST='\033[02;36m\]\h'
 HOST=' '$HOST
 if ls --version 2>/dev/null | grep -q 'coreutils'; then alias ls='ls --color=always'
