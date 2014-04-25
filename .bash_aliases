@@ -6,7 +6,7 @@ alias b="cd -"
 alias c="cd $WORKBASE/code"
 alias d="~/Dropbox"
 alias f='git fetch'
-alias g='git status -s'
+alias g='git status'
 alias h='history | tail -15'
 alias l='ls -alFtrG'
 alias m="cd $WORKBASE_GIT/webs/michaeldurrant.com"
@@ -30,6 +30,7 @@ alias aup='cp ~/.bash_aliases ~/Dropnot/setups; cd ~/Dropnot/setups; git add .ba
 alias bdown='cd ~/Dropnot/setups; git pull; cp ~/Dropnot/setups/.bashrc ~; . ~/.bashrc; cd -'
 alias adown='cd ~/Dropnot/setups; git pull; cp ~/Dropnot/setups/.bash_aliases ~; . ~/.bash_aliases; cd -'
 # Other:
+alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
 alias mvv='mv -iv'
 alias rmi='rm -i'
