@@ -23,6 +23,7 @@ alias z='cd ~/zipcar'
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
+alias ls='ls -F'
 alias mv='mv -i'
 # Easy update of .bashrc and .bash_aliases
 alias bup='cp ~/.bashrc ~/Dropnot/setups; cd ~/Dropnot/setups; git add .bashrc; git commit -m".bashrc update"; git push origin master; cd -'
