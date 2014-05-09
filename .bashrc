@@ -30,7 +30,7 @@ export EDITOR=vim
 set -o vi # mdd 8/3/13 vi at the command line
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-[[ ! $TERM =~ screen ]] && [ -n "$(type -P tmux)" ] && exec tmux
+[[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/2014
 [[ -s /home/durrantm/.autojump/etc/profile.d/autojump.sh ]] && source /home/durrantm/.autojump/etc/profile.d/autojump.sh
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
