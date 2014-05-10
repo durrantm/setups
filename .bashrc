@@ -26,5 +26,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
 [ -s ~/.autojump/etc/profile.d/autojump.sh ] && . ~/.autojump/etc/profile.d/autojump.sh
 [ -z "$TMUX" ] && export TERM=xterm-256color
-[[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM as a function
+[ -z $TMUX ] && exec tmux
+[ -s "$HOME/.rvm/scripts/rvm" ] && . "$HOME/.rvm/scripts/rvm" # Load RVM as a function
