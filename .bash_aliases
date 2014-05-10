@@ -23,13 +23,18 @@ alias z='cd ~/zipcar'
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
-alias ls='ls -F'
 alias mv='mv -i'
-# Easy update of .bashrc and .bash_aliases
-alias bup='cp ~/.bashrc ~/Dropnot/setups; cd ~/Dropnot/setups; git add .bashrc; git commit -m".bashrc update"; git push origin master; cd -'
-alias aup='cp ~/.bash_aliases ~/Dropnot/setups; cd ~/Dropnot/setups; git add .bash_aliases; git commit -m".bash aliases update"; git push origin master; cd -'
+# Easy update of .bashrc, .bash_aliases, etc.
+zup () { cp ~/$1 ~/Dropnot/setups; cd ~/Dropnot/setups; git fetch; git merge origin/master; git add $1; git commit -m"$1 update"; git push origin master; cp $1 ~; cd -; }
+alias bup='cp ~/.bashrc ~/Dropnot/setups; cd ~/Dropnot/setups; git fetch; git merge origin/master; git add .bashrc; git commit -m".bashrc update"; git push origin master; cp .bashrc ~; cd -'
+#
+alias tup='cp ~/.tmux.conf ~/Dropnot/setups; cd ~/Dropnot/setups; git add .tmux.conf; git commit -m".tmux.conf update"; git push origin master; cd -'
+alias aup='cp ~/.bash_aliases ~/Dropnot/setups; cd ~/Dropnot/setups; git add .bash_aliases; git commit -m".bash_aliases update"; git push origin master; cd -'
+alias vup='cp ~/.viminfo ~/Dropnot/setups; cd ~/Dropnot/setups; git add .viminfo; git commit -m".viminfo update"; git push origin master; cd -'
 alias bdown='cd ~/Dropnot/setups; git pull; cp ~/Dropnot/setups/.bashrc ~; . ~/.bashrc; cd -'
 alias adown='cd ~/Dropnot/setups; git pull; cp ~/Dropnot/setups/.bash_aliases ~; . ~/.bash_aliases; cd -'
+alias tdown='cd ~/Dropnot/setups; git pull; cp ~/Dropnot/setups/.tmux.conf ~; . ~/.tmux.conf; cd -'
+alias vdown='cd ~/Dropnot/setups; git pull; cp ~/Dropnot/setups/.viminfo ~; . ~/.viminfo; cd -'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
