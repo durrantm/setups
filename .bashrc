@@ -25,6 +25,7 @@ alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)
 [ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
 [ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
 md () { mkdir -p "$@" && cd "$@"; }
+bup () { cp ~/$1 ~/Dropnot/setups; cd ~/Dropnot/setups; git fetch; git merge origin/master; git add $1; git commit -m"$1 update"; git push origin master; cp $1 ~; cd -; }
 [ -z "$TMUX" ] && export TERM=xterm-256color
 export EDITOR=vim
 set -o vi # mdd 8/3/13 vi at the command line
