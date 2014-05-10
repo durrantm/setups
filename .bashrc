@@ -1,13 +1,8 @@
-[ -z "$PS1" ] && return # If not running interactively, don't do anything
-HISTCONTROL=ignoreboth:erasedups
-HISTSIZE=100000
-HISTFILESIZE=200000
-shopt -s histappend
-shopt -s checkwinsize
-cdc() { for fn in "$@"; do source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn; done; }
-alias cat='cdc' # Keeo this alias here next to the cdc definition above
-HOST='\033[02;36m\]\h'
-HOST=' '$HOST
+[ -z "$PS1" ] && return # If not interactiv, don't do anything
+HISTCONTROL=ignoreboth:erasedups HISTSIZE=100000 HISTFILESIZE=200000
+shopt -s histappend; shopt -s checkwinsize
+cdc() { for fn in "$@"; do source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn; done; }; alias cat='cdc' # Keep here next to cdc definition
+HOST='\033[02;36m\]\h'; HOST=' '$HOST
 ls --color-always > /dev/null 2>&1 && alias ls='ls --color=always' || alias ls='ls -G'
 md () { mkdir -p "$@" && cd "$@"; }
 bup () { cp ~/$1 ~/Dropnot/setups; cd ~/Dropnot/setups; git fetch; git merge origin/master; git add $1; git commit -m"$1 update"; git push origin master; cp $1 ~; cd -; }
@@ -18,14 +13,14 @@ LOCATION=' \033[01;34m\]`pwd | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(
 BRANCH=' \033[00;33m\]$(parse_git_branch)\[\033[00m\]\n\$ '
 PS1=$TIME$USER$HOST$LOCATION$BRANCH
 PS2='\[\033[01;36m\]>'
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # +friendly for non-text files
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # friendly for non-text files
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
 [ "${BASH_VERSINFO[0]}" -ge 4 ] && shopt -s autocd
 [ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
 [ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
 [ -z "$TMUX" ] && export TERM=xterm-256color
-[ -s /home/durrantm/.autojump/etc/profile.d/autojump.sh ] && source /home/durrantm/.autojump/etc/profile.d/autojump.sh
-set -o vi # mdd 8/3/13 vi at the command line
+[ -s ~/.autojump/etc/profile.d/autojump.sh ] && . ~/.autojump/etc/profile.d/autojump.sh
+set -o vi # vi at command line
 ### Added by the Heroku Toolbelt
 export EDITOR=vim
 export PATH="/usr/local/heroku/bin:$PATH"
