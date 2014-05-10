@@ -8,10 +8,8 @@ cdc() { for fn in "$@"; do source-highlight --out-format=esc -o STDOUT -i $fn 2>
 alias cat='cdc' # Keeo this alias here next to the cdc definition above
 HOST='\033[02;36m\]\h'
 HOST=' '$HOST
-if ls --version 2>/dev/null | grep -q 'coreutils'; then alias ls='ls --color=always'
-else alias ls='ls -G'
-fi
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # make less more friendly for non-text input files
+ls --version 2>/dev/null | grep -q 'coreutils' && alias ls='ls --color=always' || alias ls='ls -G'
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # +friendly for non-text files
 git () { [ $1 = commit ] && command git commit -v "${@:2}" || command git "$@"; }
 parse_git_branch () { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'; }
 TIME='\033[01;31m\]\t \033[01;32m\]'
