@@ -18,7 +18,6 @@ export EDITOR=vim
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/2014
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # friendly for non-text files
 test -f ~/.bash_aliases && . $_
 test -f ~/.git-completion.bash && . $_
@@ -27,4 +26,5 @@ test -s ~/.autojump/etc/profile.d/autojump.sh && . $_
 [ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
 [ -z "$TMUX" ] && export TERM=xterm-256color
 [ -z $TMUX ] && exec tmux
-test -s ~/.rvm/scripts/rvm && . $_
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
