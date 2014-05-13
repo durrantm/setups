@@ -23,6 +23,7 @@ alias z='cd ~/zipcar'
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
+alias ls='ls -F'
 alias mv='mv -i'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
@@ -84,6 +85,7 @@ alias zaa="cd $ZIPCAR_BASE/zipcar-rails-admin-api"
 alias zra="cd $ZIPCAR_BASE/reservations-api"
 alias zrc="cd $ZIPCAR_BASE/zipcar-rails-core"
 alias zag="cd $ZIPCAR_BASE/zipcar-auth-gem"
+alias zat="cd $ZIPCAR_BASE/async-tasks"
 alias zrt="cd $ZIPCAR_BASE/tools"
 alias zru="cd $ZIPCAR_BASE/reservations-ui"
 alias dummy="cd $ZIPCAR_BASE/zipcar-rails-core/spec/dummy"
