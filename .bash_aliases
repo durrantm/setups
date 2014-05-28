@@ -23,7 +23,6 @@ alias z='cd ~/zipcar'
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
-alias ls='ls -F'
 alias mv='mv -i'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
