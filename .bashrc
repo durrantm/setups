@@ -1,4 +1,3 @@
-[ -z "$PS1" ] && return # If not interactive, exit
 HISTCONTROL=ignoreboth:erasedups HISTSIZE=100000 HISTFILESIZE=200000
 shopt -s histappend checkwinsize
 cdc() { for fn in "$@"; do source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn; done; }; alias cat='cdc' # Keep here next to cdc definition
