@@ -23,7 +23,6 @@ test -f ~/.git-completion.bash && . $_
 test -s ~/.autojump/etc/profile.d/autojump.sh && . $_
 [ ${BASH_VERSINFO[0]} -ge 4 ] && shopt -s autocd
 [ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
-[ -z "$TMUX" ] && export TERM=xterm-256color
-[ -z $TMUX ] && exec tmux
+[ -z "$TMUX" ] && export TERM=xterm-256color && exec tmux
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
