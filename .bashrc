@@ -1,5 +1,6 @@
 HISTCONTROL=ignoreboth:erasedups HISTSIZE=100000 HISTFILESIZE=200000
 shopt -s histappend checkwinsize
+shopt -s expand_aliases
 cdc() { for fn in "$@"; do source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn; done; }; alias cat='cdc' # Keep here next to cdc definition
 ls --color=al > /dev/null 2>&1 && alias ls='ls -F --color=al' || alias ls='ls -G'
 md () { [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!"; }
