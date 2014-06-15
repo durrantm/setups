@@ -54,6 +54,7 @@ alias lnk="cd $WORKBASE_GIT/webs/rails_apps/linker"
 alias ga='git add '
 alias gb='git branch'
 alias gco='git checkout'
+alias gcom='git checkout master'
 alias gcob='git checkout -b '
 alias gc='git commit'
 alias gcv='git comit' # This is a git alias for git -v commit. Mispell intentional.
@@ -61,7 +62,8 @@ alias gf='git fetch'
 alias gpull='git pull '
 alias gpush='git push '
 alias gpullom='git pull origin master'
-alias gpushom='git push origin master'
+alias go='git push origin master'
+alias gh='git push heroku master'
 alias gg='git grep '
 alias gl='git log --pretty=oneline | head -8'
 alias gla='git log --pretty=oneline' # a=all
