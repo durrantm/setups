@@ -1,11 +1,9 @@
 HISTCONTROL=ignoreboth:erasedups HISTSIZE=100000 HISTFILESIZE=200000
 shopt -s histappend checkwinsize
-shopt -s expand_aliases
 cdc() { for fn in "$@"; do source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn; done; }; alias cat='cdc' # Keep here next to cdc definition
 ls --color=al > /dev/null 2>&1 && alias ls='ls -F --color=al' || alias ls='ls -G'
 md () { [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!"; }
 bup () { [ $# = 1 ] && { cp -v ~/$1 ~/Dropnot/setups; cd ~/Dropnot/setups; git fetch; git merge origin/master; git add $1; git commit -m"$1 update"; git push origin master; cp -v $1 ~; cd -; } || echo "Error - no filename passed!";}
-git () { [ $1 = commit ] && command git commit -v "${@:2}" || command git "$@"; }
 git_branch () { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'; }
 HOST='\033[02;36m\]\h'; HOST=' '$HOST
 TIME='\033[01;31m\]\t \033[01;32m\]'
@@ -24,6 +22,6 @@ test -f ~/.git-completion.bash && . $_
 test -s ~/.autojump/etc/profile.d/autojump.sh && . $_
 [ ${BASH_VERSINFO[0]} -ge 4 ] && shopt -s autocd
 [ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
-[ -z "$TMUX" ] && export TERM=xterm-256color && exec tmux
+[ -z $TMUX ] && export TERM=xterm-256color && exec tmux
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
