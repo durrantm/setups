@@ -1,0 +1,26 @@
+My tools and preferences.  Not recommendations, best practices, work for everyone, etc.
+
+3 Main areas to cover:
+
+1) A (compact) .bashrc that works on both Ubuntu and OSX including a new machine. on github dotfiles.
+
+2) .bash_aliases that I like.  Focus on 1 letter ones.  4 term windows.  d, n, p, g, c, b, h, l, z!!!ipcar, q (deep nest)
+
+3) .bashrc
+  - ls in color
+  - git
+  - PS1 prompt, including git branch, \n ath the end a/b/c/_x/y/z
+  - git autocomplete
+  - instant dotfiles update (bup)
+  - autocd
+  - autojump
+  - set -o vi
+
+
+
+
+
+
+
+
+
