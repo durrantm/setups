@@ -46,7 +46,6 @@ alias fgrep='fgrep --color=auto'
 # Rails
 alias rc='rails console'
 alias rs='rails server'
-alias br='bundle exec rspec spec'
 # DropBox - syncd
 alias work="cd $WORKBASE"
 # DropNot - NOT syncd !
@@ -97,7 +96,9 @@ alias zab="cd $ZIPCAR_BASE/activerecord-boolean-converter"
 alias dummy="cd $ZIPCAR_BASE/zipcar-rails-core/spec/dummy"
 alias s20="ssh uscamwebq20.boston.zipcar.com"
 alias s96="ssh uscamwebd96.boston.zipcar.com"
-alias zqa="cd $ZIPCAR_BASE/tools/qa/ui_auto"
+alias qa="cd $ZIPCAR_BASE/tools/qa/ui_auto"
 alias auto="cd $ZIPCAR_BASE/tools/qa/ui_auto"
 # git aliases
 git config --global alias.comit 'commit -v'
+alias a=ggg
+alias a=ggg
