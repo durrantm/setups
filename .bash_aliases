@@ -24,6 +24,7 @@ alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
 alias mv='mv -i'
+alias cr="cd $WORKBASE/code/ruby__rails/ruby"
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
@@ -46,7 +47,6 @@ alias fgrep='fgrep --color=auto'
 # Rails
 alias rc='rails console'
 alias rs='rails server'
-alias br='bundle exec rspec spec'
 # DropBox - syncd
 alias work="cd $WORKBASE"
 # DropNot - NOT syncd !
@@ -102,3 +102,5 @@ alias s96="ssh uscamwebd96.boston.zipcar.com"
 alias qe="./qe_test.sh"
 # git aliases
 git config --global alias.comit 'commit -v'
+alias a=ggg
+alias a=ggg
