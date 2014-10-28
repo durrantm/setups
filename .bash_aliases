@@ -64,9 +64,7 @@ alias gpull='git pull '
 alias gpush='git push '
 alias gpullom='git pull origin master'
 alias go='git push origin master'
-alias gof='git push -f origin master'
 alias gh='git push heroku master'
-alias ghf='git push -f heroku master'
 alias gg='git grep '
 alias gl='git log --pretty=oneline | head -8'
 alias gla='git log --pretty=oneline' # a=all
@@ -94,10 +92,13 @@ alias zrt="cd $ZIPCAR_BASE/tools"
 alias zrp="cd $ZIPCAR_BASE/performance"
 alias zru="cd $ZIPCAR_BASE/reservations-ui"
 alias zab="cd $ZIPCAR_BASE/activerecord-boolean-converter"
+alias zqa="cd $ZIPCAR_BASE/qa"
+alias zqi="cd $ZIPCAR_BASE/qa/ui_auto"
+alias zst="cd $ZIPCAR_BASE/qa/smoke_test"
+alias zto="cd $ZIPCAR_BASE/tools"
 alias dummy="cd $ZIPCAR_BASE/zipcar-rails-core/spec/dummy"
 alias s20="ssh uscamwebq20.boston.zipcar.com"
 alias s96="ssh uscamwebd96.boston.zipcar.com"
-alias zqa="cd $ZIPCAR_BASE/tools/qa/ui_auto"
-alias auto="cd $ZIPCAR_BASE/tools/qa/ui_auto"
+alias qe="./qe_test.sh"
 # git aliases
 git config --global alias.comit 'commit -v'
