@@ -26,4 +26,5 @@ test -s ~/.autojump/etc/profile.d/autojump.sh && . $_
 [ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
 [ -z "$TMUX" ] && command -v tmux > /dev/null && TERM=xterm-256color && exec tmux
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# fhdjfhdjfhd
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
