@@ -5,7 +5,8 @@ alias a='. ~/.bash_aliases'
 alias b="cd -"
 alias c="cd $WORKBASE/code"
 alias d="~/Dropbox"
-alias f='git fetch'
+alias e="env"
+alias f='find . -type f | xargs grep '
 alias g='git status'
 alias h='history | tail -15'
 alias l='ls -alFtrG'
@@ -15,6 +16,7 @@ alias p='pwd'
 alias q="cd $WORKBASE/code/ruby__rails/ruby/ruby_quiz"
 alias r='rspec spec'
 alias s="cd $WORKBASE_GIT/setups"
+alias t="time "
 alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
@@ -42,8 +44,6 @@ alias lsd1='ls -d1 '
 alias ldl='ls -d1'
 alias play='cd ~/play/'
 alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
 # Rails
 alias rc='rails console'
 alias rs='rails server'
@@ -64,8 +64,9 @@ alias gpull='git pull '
 alias gpush='git push '
 alias gpullom='git pull origin master'
 alias go='git push origin master'
-alias gh='git push heroku master'
+alias gf='git fetch'
 alias gg='git grep '
+alias gh='git push heroku master'
 alias gl='git log --pretty=oneline | head -8'
 alias gla='git log --pretty=oneline' # a=all
 alias gits='alias | grep "^alias g"'
