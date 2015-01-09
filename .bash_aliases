@@ -5,7 +5,8 @@ alias a='. ~/.bash_aliases'
 alias b="cd -"
 alias c="cd $WORKBASE/code"
 alias d="~/Dropbox"
-alias f='git fetch'
+alias e="env"
+alias f='find . -type f | xargs grep '
 alias g='git status'
 alias h='history | tail -15'
 alias l='ls -alFtrG'
@@ -15,6 +16,7 @@ alias p='pwd'
 alias q="cd $WORKBASE/code/ruby__rails/ruby/ruby_quiz"
 alias r='rspec spec'
 alias s="cd $WORKBASE_GIT/setups"
+alias t="time "
 alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
@@ -23,11 +25,14 @@ alias z='cd ~/zipcar'
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
+alias gr='grep -r'
 alias mv='mv -i'
+alias cr="cd $WORKBASE/code/ruby__rails/ruby"
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
 alias mvv='mv -iv'
+alias myip='curl ifconfig.me'
 alias rmi='rm -i'
 alias rmv='rm -v'
 alias rmiv='rm -iv'
@@ -41,12 +46,9 @@ alias lsd1='ls -d1 '
 alias ldl='ls -d1'
 alias play='cd ~/play/'
 alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
 # Rails
 alias rc='rails console'
 alias rs='rails server'
-alias br='bundle exec rspec spec'
 # DropBox - syncd
 alias work="cd $WORKBASE"
 # DropNot - NOT syncd !
@@ -64,8 +66,9 @@ alias gpull='git pull '
 alias gpush='git push '
 alias gpullom='git pull origin master'
 alias go='git push origin master'
-alias gh='git push heroku master'
+alias gf='git fetch'
 alias gg='git grep '
+alias gh='git push heroku master'
 alias gl='git log --pretty=oneline | head -8'
 alias gla='git log --pretty=oneline' # a=all
 alias gits='alias | grep "^alias g"'
@@ -81,7 +84,7 @@ alias gmt='git mergetool'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
-# zipcar aliases
+# zipcar
 ZIPCAR_BASE='~/zipcar'
 alias zaa="cd $ZIPCAR_BASE/zipcar-rails-admin-api"
 alias zra="cd $ZIPCAR_BASE/reservations-api"
@@ -102,3 +105,5 @@ alias s96="ssh uscamwebd96.boston.zipcar.com"
 alias qe="./qe_test.sh"
 # git aliases
 git config --global alias.comit 'commit -v'
+alias a=ggg
+alias a=ggg
