@@ -13,7 +13,6 @@ set incsearch
 set number
 " more3 mdd stuff - set tabs to be spaces and length of 2 characters.
 set smartindent
-set autoindent
 set tabstop=2 " What the tab key does, i.e. 2 spaces instead of tab
 set shiftwidth=2 "What is used for indentation
 set expandtab
