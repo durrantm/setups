@@ -41,7 +41,6 @@ let loaded_matchparen = 1 " MDD Turn off matching bracket highlighting.
 filetype plugin indent on    " required
 filetype indent on
 filetype plugin on
-syntax on " Turn on syntax highlighting
 set hidden " Why is this not a default
 set lazyredraw " Don't update the display while executing macros
 set showmode " At least let yourself know what mode you're in
