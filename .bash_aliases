@@ -27,6 +27,7 @@ alias mv='mv -i'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
+alias bers='bundle exec rspec spec'
 alias mvv='mv -iv'
 alias rmi='rm -i'
 alias rmv='rm -v'
