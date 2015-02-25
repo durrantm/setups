@@ -1,0 +1,1 @@
+Just unzip the file into ~/.vim  that's it!  Nothing else to run or change!
