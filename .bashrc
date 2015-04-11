@@ -24,5 +24,6 @@ test -f ~/.git-completion.bash && . $_
 test -s ~/.autojump/etc/profile.d/autojump.sh && . $_
 [ ${BASH_VERSINFO[0]} -ge 4 ] && shopt -s autocd
 [ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
-#[ -z "$TMUX" ] && command -v tmux > /dev/null && TERM=xterm-256color && tmux
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#[ -z "$TMUX" ] && command -v tmux > /dev/null && TERM=xterm-256color && tmux
+[ $TERM != "screen" ] && TERM=xterm-256color && exec tmux
