@@ -29,6 +29,7 @@ alias mv='mv -i'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
+alias berc='bundle exec rails console'
 alias bers='bundle exec rspec spec'
 alias berss='bundle exec rails server'
 alias mvv='mv -iv'
