@@ -29,8 +29,6 @@ alias mv='mv -i'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
-alias bers='bundle exec rspec spec'
-alias berss='bundle exec rails server'
 alias mvv='mv -iv'
 alias rmi='rm -i'
 alias rmv='rm -v'
@@ -51,6 +49,8 @@ alias fgrep='fgrep --color=auto'
 alias rc='rails console'
 alias rs='rails server'
 alias br='bundle exec rspec spec'
+alias bs='bundle exec rails server'
+alias ber='bundle exec rspec '
 # DropBox - syncd
 alias work="cd $WORKBASE"
 # DropNot - NOT syncd !
@@ -71,7 +71,7 @@ alias gpullom='git pull origin master'
 alias go='git push origin master'
 alias gh='git push heroku master'
 alias gg='git grep '
-alias gl='git log --pretty=oneline | head -8'
+alias gl='git log --name-status --pretty=oneline | head -20'
 alias gla='git log --pretty=oneline' # a=all
 alias gits='alias | grep "^alias g"'
 alias grm='git reset --hard origin/master'
