@@ -21,10 +21,9 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/20
 newalias() { echo "alias ${1}" >> $HOME/.bash_aliases; source ~/.bash_aliases; }
 test -f ~/.bash_aliases && . $_
 test -f ~/.git-completion.bash && . $_
-test -s ~/.autojump/etc/profile.d/autojump.sh && . $_
+test -f /etc/bash_completion && ! shopt -oq posix && . /etc/bash_completion
+test -f ~/.autojump/etc/profile.d/autojump.sh && . $_
 [ ${BASH_VERSINFO[0]} -ge 4 ] && shopt -s autocd
-[ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-#[ -z "$TMUX" ] && command -v tmux > /dev/null && TERM=xterm-256color && exec tmux
-#[ $TERM != "screen" ] && TERM=xterm-256color && exec tmux
 [ `uname -s` != Linux ] && exec tmux
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH=$HOME/.node/bin:$PATH
