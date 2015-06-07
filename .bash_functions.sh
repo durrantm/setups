@@ -1,9 +1,9 @@
 cdc() {
   for fn in "$@"; do
-    source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn;
-  done; }; alias cat='cdc' # Keep here next to cdc definition
+    source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn
+  done; }; alias cat='cdc' # Keep cat alias here by (cdc) function definition
 md () {
-  [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!";
+  [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!"
   }
 bup () {
   [ $# = 1 ] && {
@@ -18,5 +18,5 @@ bup () {
     cd -; } || echo "Error - no filename passed!"
   }
 git_branch () {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/';
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
   }
