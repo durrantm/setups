@@ -1,6 +1,13 @@
 cdc() {
   for fn in "$@"; do
-    source-highlight --out-format=esc -o STDOUT -i $fn 2>/dev/null || /bin/cat $fn
+    for fn do
+      if [[ "${fn##*/}" == .* ]]
+      then
+        source-highlight --src-lang=sh --out-format=esc -i "$fn"
+      else
+        source-highlight               --out-format=esc -i "$fn"
+      fi 2> /dev/null  ||  /bin/cat "$fn"
+    done
   done; }; alias cat='cdc' # Keep cat alias here by (cdc) function definition
 md () {
   [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!"
@@ -19,4 +26,7 @@ bup () {
   }
 git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+  }
+newalias() {
+  echo "alias ${1}" >> $HOME/.bash_aliases; source ~/.bash_aliases;
   }
