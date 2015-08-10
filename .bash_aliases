@@ -17,6 +17,7 @@ alias r='rspec spec'
 alias s="cd $WORKBASE_GIT/setups"
 alias t='tmux'
 alias v='vim .'
+alias vi='vim'
 alias vu='vagrant up'
 alias vs='vagrant ssh'
 alias w="cd $WORKBASE_GIT/webs"
