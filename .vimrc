@@ -6,9 +6,9 @@ if has('mouse')
     autocmd BufEnter * set ttymouse=xterm2
   endif
 endif
-
 " mdd specific stuff --- start
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set clipboard=unnamed
 set hlsearch
 set incsearch
 set number
