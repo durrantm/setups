@@ -5,6 +5,7 @@ alias a='. ~/.bash_aliases'
 alias b="cd -"
 alias c="cd $WORKBASE/code"
 alias d="~/Dropbox"
+alias e="cd $WORKBASE/code/sh__sed__awk/euler"
 alias f='git fetch'
 alias g='git status'
 alias h='history | tail -15'
@@ -17,9 +18,6 @@ alias r='rspec spec'
 alias s="cd $WORKBASE_GIT/setups"
 alias t='tmux'
 alias v='vim .'
-alias vi='vim'
-alias vu='vagrant up'
-alias vs='vagrant ssh'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
 alias z='cd ~/zipcar'
@@ -28,7 +26,6 @@ alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
 alias mv='mv -i'
-alias se='cd ~/selenium_IDE/'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
@@ -91,8 +88,24 @@ alias gmt='git mergetool'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
-EVERQUOTE_BASE='~/eq'
-# alias lynx="cd $EVERQUOTE_BASE/lynx"
+# zipcar aliases
+ZIPCAR_BASE='~/zipcar'
+alias zaa="cd $ZIPCAR_BASE/zipcar-rails-admin-api"
+alias zca="cd $ZIPCAR_BASE/core-api"
+alias zrc="cd $ZIPCAR_BASE/zipcar-rails-core"
+alias zag="cd $ZIPCAR_BASE/zipcar-auth-gem"
+alias zat="cd $ZIPCAR_BASE/async-tasks"
+alias zrt="cd $ZIPCAR_BASE/tools"
+alias zrp="cd $ZIPCAR_BASE/performance"
+alias zru="cd $ZIPCAR_BASE/reservations-ui"
+alias zab="cd $ZIPCAR_BASE/activerecord-boolean-converter"
+alias zqa="cd $ZIPCAR_BASE/qa"
+alias zqi="cd $ZIPCAR_BASE/qa/ui_auto"
+alias zst="cd $ZIPCAR_BASE/qa/smoke_test"
+alias zto="cd $ZIPCAR_BASE/tools"
+alias dum="cd $ZIPCAR_BASE/zipcar-rails-core/spec/dummy"
+alias s20="ssh uscamwebq20.boston.zipcar.com"
+alias s96="ssh uscamwebd96.boston.zipcar.com"
+alias qe="./qe_test.sh"
 # git aliases
 git config --global alias.comit 'commit -v'
-alias fffff='fdfdfdf'
