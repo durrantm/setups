@@ -8,6 +8,7 @@ if has('mouse')
 endif
 
 " mdd specific stuff --- start
+execute pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set hlsearch
 set incsearch
@@ -19,6 +20,7 @@ set shiftwidth=2 "What is used for indentation
 set expandtab
 set pastetoggle=<F2>
 autocmd BufWritePre *.rb :%s/\s\+$//e
+set clipboard=unnamed
 " mdd specific stuff --- end
 set nocompatible
 " Get that filetype stuff happening
