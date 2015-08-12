@@ -17,6 +17,7 @@ alias r='rspec spec'
 alias s="cd $WORKBASE_GIT/setups"
 alias t='tmux'
 alias v='vim .'
+alias vi='vim'
 alias vu='vagrant up'
 alias vs='vagrant ssh'
 alias w="cd $WORKBASE_GIT/webs"
@@ -27,6 +28,7 @@ alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
 alias mv='mv -i'
+alias se='cd ~/selenium_IDE/'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
