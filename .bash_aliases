@@ -28,7 +28,6 @@ alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
 alias mv='mv -i'
-alias se='cd ~/selenium_IDE/'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
@@ -92,7 +91,7 @@ alias gmt='git mergetool'
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
 EVERQUOTE_BASE='~/eq'
+alias se="cd $EVERQUOTE_BASE/selenium_IDE/"
 # alias lynx="cd $EVERQUOTE_BASE/lynx"
 # git aliases
 git config --global alias.comit 'commit -v'
-alias fffff='fdfdfdf'
