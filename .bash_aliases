@@ -5,6 +5,7 @@ alias a='. ~/.bash_aliases'
 alias b="cd -"
 alias c="cd $WORKBASE/code"
 alias d="~/Dropbox"
+alias e="cd $WORKBASE/code/sh__sed__awk/euler"
 alias f='git fetch'
 alias g='git status'
 alias h='history | tail -15'
@@ -17,9 +18,6 @@ alias r='rspec spec'
 alias s="cd $WORKBASE_GIT/setups"
 alias t='tmux'
 alias v='vim .'
-alias vi='vim'
-alias vu='vagrant up'
-alias vs='vagrant ssh'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
 alias z='cd ~/zipcar'
@@ -92,6 +90,6 @@ alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
 EVERQUOTE_BASE='~/eq'
 alias se="cd $EVERQUOTE_BASE/selenium_IDE/"
-# alias lynx="cd $EVERQUOTE_BASE/lynx"
+alias lynx="cd $EVERQUOTE_BASE/lynx"
 # git aliases
 git config --global alias.comit 'commit -v'
