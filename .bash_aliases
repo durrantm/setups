@@ -87,10 +87,7 @@ alias gmt='git mergetool'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
-<<<<<<< HEAD
 # everquote
-EVERQUOTE_BASE='~/eq'
-alias se="cd $EVERQUOTE_BASE/selenium_IDE/"
-alias lynx="cd $EVERQUOTE_BASE/lynx"
+alias se="cd ~/eq/selenium_IDE"
 # git aliases
 git config --global alias.comit 'commit -v'
