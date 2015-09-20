@@ -20,7 +20,6 @@ alias t='tmux'
 alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
-alias z='cd ~/zipcar'
 # Two letter:
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
@@ -88,24 +87,7 @@ alias gmt='git mergetool'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
-# zipcar aliases
-ZIPCAR_BASE='~/zipcar'
-alias zaa="cd $ZIPCAR_BASE/zipcar-rails-admin-api"
-alias zca="cd $ZIPCAR_BASE/core-api"
-alias zrc="cd $ZIPCAR_BASE/zipcar-rails-core"
-alias zag="cd $ZIPCAR_BASE/zipcar-auth-gem"
-alias zat="cd $ZIPCAR_BASE/async-tasks"
-alias zrt="cd $ZIPCAR_BASE/tools"
-alias zrp="cd $ZIPCAR_BASE/performance"
-alias zru="cd $ZIPCAR_BASE/reservations-ui"
-alias zab="cd $ZIPCAR_BASE/activerecord-boolean-converter"
-alias zqa="cd $ZIPCAR_BASE/qa"
-alias zqi="cd $ZIPCAR_BASE/qa/ui_auto"
-alias zst="cd $ZIPCAR_BASE/qa/smoke_test"
-alias zto="cd $ZIPCAR_BASE/tools"
-alias dum="cd $ZIPCAR_BASE/zipcar-rails-core/spec/dummy"
-alias s20="ssh uscamwebq20.boston.zipcar.com"
-alias s96="ssh uscamwebd96.boston.zipcar.com"
-alias qe="./qe_test.sh"
+# everquote
+alias se="cd ~/eq/selenium_IDE"
 # git aliases
 git config --global alias.comit 'commit -v'
