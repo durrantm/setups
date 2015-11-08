@@ -49,26 +49,24 @@ alias fgrep='fgrep --color=auto'
 # Rails
 alias rc='rails console'
 alias rs='rails server'
-alias br='bundle exec rspec spec'
-alias bs='bundle exec rails server'
-alias ber='bundle exec rspec '
+alias ber='bundle exec rspec'
+alias bers='bundle exec rails server'
 # DropBox - syncd
 alias work="cd $WORKBASE"
 # DropNot - NOT syncd !
 alias lnk="cd $WORKBASE_GIT/webs/rails_apps/linker"
 # git
-alias ga='git add '
-alias gb='git branch'
 alias gco='git checkout'
 alias gcom='git checkout master'
 alias gcob='git checkout -b '
+alias ga='git add '
+alias gb='git branch'
 alias gc='git commit'
-alias gcv='git comit' # This is a git alias for git -v commit. Mispell intentional.
+alias gca='git commit --amend'
+alias gcv='git comit' # This is a git alias for git -v commit (verbose). Mispell intentional.
 alias gf='git fetch'
 alias gpull='git pull '
 alias gpush='git push '
-alias gpom='git push '
-alias gpullom='git pull origin master'
 alias go='git push origin master'
 alias gh='git push heroku master'
 alias gg='git grep '
@@ -78,13 +76,6 @@ alias gls='git log --name-status'
 alias gits='alias | grep "^alias g"'
 alias grm='git reset --hard origin/master'
 alias gfrm='git fetch; git reset --hard origin/master'
-alias grs='git reset --hard origin/staging'
-alias gfrs='git fetch; git reset --hard origin/staging'
-alias gd='git diff'
-alias gdt='git difftool '
-alias gdtd='git difftool -d'
-alias gm='git merge '
-alias gmt='git mergetool'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
