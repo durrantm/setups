@@ -5,6 +5,7 @@ alias a='. ~/.bash_aliases'
 alias b="cd -"
 alias c="cd $WORKBASE/code"
 alias d="~/Dropbox"
+alias e="cd $WORKBASE/code/sh__sed__awk/euler"
 alias f='git fetch'
 alias g='git status'
 alias h='history | tail -15'
@@ -17,12 +18,8 @@ alias r='rspec spec'
 alias s="cd $WORKBASE_GIT/setups"
 alias t='tmux'
 alias v='vim .'
-alias vi='vim'
-alias vu='vagrant up'
-alias vs='vagrant ssh'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
-alias z='cd ~/zipcar'
 # Two letter:
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
@@ -45,6 +42,7 @@ alias lsd='ls -Fd .*'
 alias lsd1='ls -d1 '
 alias ldl='ls -d1'
 alias play='cd ~/play/'
+alias please='sudo $(history -p !!)'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -65,7 +63,6 @@ alias gco='git checkout'
 alias gcom='git checkout master'
 alias gcob='git checkout -b '
 alias gc='git commit'
-alias gca='git commit --amend'
 alias gcv='git comit' # This is a git alias for git -v commit. Mispell intentional.
 alias gf='git fetch'
 alias gpull='git pull '
@@ -91,8 +88,8 @@ alias gmt='git mergetool'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
-EVERQUOTE_BASE='~/eq'
-alias se="cd $EVERQUOTE_BASE/selenium_IDE/"
-# alias lynx="cd $EVERQUOTE_BASE/lynx"
+# everquote
+alias se="cd ~/eq/selenium_IDE"
+alias lynx="cd ~/eq/lynx"
 # git aliases
 git config --global alias.comit 'commit -v'
