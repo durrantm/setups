@@ -14,8 +14,8 @@ md () {
   }
 bup () {
   [ $# = 1 ] && {
-    #cp -v ~/$1 ~/Dropnot/setups
-    install -D -v ~/$1 ~/Dropnot/setups/$1
+    cp -v ~/$1 ~/Dropnot/setups
+    #install -d -v ~/$1 ~/Dropnot/setups/$1   # attempt to avoid no dir issue
     cd ~/Dropnot/setups
     git fetch
     git merge origin/master
