@@ -6,11 +6,8 @@ if has('mouse')
     autocmd BufEnter * set ttymouse=xterm2
   endif
 endif
-
 " mdd specific stuff --- start
-if findfile("~/.vim/autoload")
-  execute pathogen#infect()
-endif
+execute pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set hlsearch
 set incsearch
