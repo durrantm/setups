@@ -64,3 +64,4 @@ nnoremap <C-g> :!google-chrome %<CR> " browser preview with ctrl-p
 nnoremap <C-f> :!firefox %<CR> " browser preview with ctrl-o
 nnoremap <C-c> :!chromium-browser %<CR> " browser preview with ctrl-c
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+" Force git update
