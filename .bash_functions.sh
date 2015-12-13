@@ -1,4 +1,4 @@
-cdc() {
+cdc () {
   for fn in "$@"; do
     for fn do
       if [[ "${fn##*/}" == .* ]]
@@ -14,8 +14,8 @@ md () {
   }
 bup () {
   [ $# = 1 ] && {
-    cp -v ~/$1 ~/Dropnot/setups
-    #install -d -v ~/$1 ~/Dropnot/setups/$1   # attempt to avoid no dir issue
+    #cp -v ~/$1 ~/Dropnot/setups
+    install -D -v ~/$1 ~/Dropnot/setups/$1
     cd ~/Dropnot/setups
     git fetch
     git merge origin/master
@@ -31,3 +31,6 @@ git_branch () {
 newalias() {
   echo "alias ${1}" >> $HOME/.bash_aliases; source ~/.bash_aliases;
   }
+diffit () {
+  colordiff $1 $2
+}
