@@ -7,7 +7,8 @@ if has('mouse')
   endif
 endif
 " mdd specific stuff --- start
-execute pathogen#infect()
+" commented out pathogen 2/3/2016 due to issues on osx (getting err message).
+" execute pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set hlsearch
 set incsearch
