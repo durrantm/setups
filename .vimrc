@@ -7,8 +7,7 @@ if has('mouse')
   endif
 endif
 " mdd specific stuff --- start
-" commented out pathogen 2/3/2016 due to issues on osx (getting err message).
-" execute pathogen#infect()
+execute pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set hlsearch
 set incsearch
@@ -65,3 +64,4 @@ nnoremap <C-g> :!google-chrome %<CR> " browser preview with ctrl-p
 nnoremap <C-f> :!firefox %<CR> " browser preview with ctrl-o
 nnoremap <C-c> :!chromium-browser %<CR> " browser preview with ctrl-c
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_custom_ignore='/spec/fixtures/vcr_cassettes/'
