@@ -21,5 +21,5 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/20
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # friendly for non-text files
 [ ${BASH_VERSINFO[0]} -ge 4 ] && shopt -s autocd
 #[ `uname -s` != Linux ] && exec tmux
-export PATH=$HOME/.node/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH=$HOME/.node/bin:$PATH
