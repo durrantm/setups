@@ -4,8 +4,10 @@
 [push]
 	default = current
 [alias]
-	comit = commit -v
   co = checkout
+  br = branch
+  ci = commit -v
+	comit = commit -v
 [branch]
 	autosetuprebase = always
 [core]
