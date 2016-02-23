@@ -1,15 +1,13 @@
 [user]
-	email = m2@snap2web.com
 	name = Michael Durrant
-[core]
-	excludesfile = /home/durrantm/.gitignore_global
-	editor = vim -f
-[color]
-	ui = true
-[alias]
-	comit = commit -v
-	ci = commit -v
-[diff]
-  external = /usr/local/bin/git-diff.sh
+	email = m2@snap2web.com
 [push]
 	default = current
+[alias]
+	comit = commit -v
+  co = checkout
+[branch]
+	autosetuprebase = always
+[core]
+	excludesfile = /Users/mdurrant/.gitignore_global
+	editor = vim
