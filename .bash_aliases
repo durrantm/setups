@@ -21,6 +21,7 @@ alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
 # Two letter:
+alias er="cd $WORKBASE/code/ruby__rails/ruby/exceptional_rescues"
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
