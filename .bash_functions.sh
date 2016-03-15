@@ -34,3 +34,12 @@ newalias() {
 diffit () {
   colordiff $1 $2
 }
+squash () {
+  yourBranch="$(git symbolic-ref HEAD 2>/dev/null)"
+  git checkout master
+  git pull
+  git checkout -
+  git reset $(git merge-base master $yourBranch)
+  git add -A
+  git commit -v
+  }
