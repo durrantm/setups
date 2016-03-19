@@ -1,4 +1,4 @@
-WORKBASE="~/Dropbox/93_2016/work"
+WORKBASE="~/Dropbox/95_2014/work"
 WORKBASE_GIT="~/Dropnot"
 # One letter quickies:
 alias a='. ~/.bash_aliases'
@@ -21,13 +21,10 @@ alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
 # Two letter:
-alias er="cd $WORKBASE/code/ruby__rails/ruby/exceptional_rescues"
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
 alias mv='mv -i'
-alias ..='cd ..'
-alias ...='cd ../..'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
@@ -85,6 +82,6 @@ alias tf='tmux set -g mode-mouse off'
 # everquote
 alias se="cd ~/eq/selenium_IDE"
 alias eq="cd ~/eq/"
-alias ly="cd ~/eq/lynx"
+alias lynx="cd ~/eq/lynx"
 # git aliases
 git config --global alias.comit 'commit -v'
