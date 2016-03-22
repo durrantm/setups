@@ -14,8 +14,8 @@ md () {
   }
 bup () {
   [ $# = 1 ] && {
-    #cp -v ~/$1 ~/Dropnot/setups
-    install -D -v ~/$1 ~/Dropnot/setups/$1
+    cp -v ~/$1 ~/Dropnot/setups
+    #install -D -v ~/$1 ~/Dropnot/setups/$1
     cd ~/Dropnot/setups
     git fetch
     git merge origin/master
@@ -34,12 +34,3 @@ newalias() {
 diffit () {
   colordiff $1 $2
 }
-squash () {
-  yourBranch="$(git symbolic-ref HEAD 2>/dev/null)"
-  git checkout master
-  git pull
-  git checkout -
-  git reset $(git merge-base master $yourBranch)
-  git add -A
-  git commit -v
-  }
