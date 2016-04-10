@@ -1,3 +1,4 @@
 alias eq='cd ~/eq'
-alias se="cd ~/eq/selenium_IDE"
-alias lynx='cd ~/eq/lynx'
+alias ly='cd ~/eq/lynx'
+alias pro='cd ~/eq/your_choice_rails'
+alias guides='cd ~/eq/guides'
