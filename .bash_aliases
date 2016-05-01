@@ -75,7 +75,7 @@ alias gl='git log'
 alias gl1='git log --oneline'
 alias glp='git log -p'
 alias glf='git log --name-status'
-alias gits='alias | grep "^alias.*git.*$"'
+alias gits='alias | grep "^alias g.*git.*$"'
 alias grm='git reset --hard origin/master'
 alias gfrm='git fetch; git reset --hard origin/master'
 # tmux
