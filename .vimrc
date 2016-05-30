@@ -64,4 +64,4 @@ nnoremap <C-f> :!firefox %<CR> " browser preview with ctrl-o
 nnoremap <C-c> :!chromium-browser %<CR> " browser preview with ctrl-c
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_custom_ignore='/spec/fixtures/vcr_cassettes/'
-set autoindent
+set autoindent " Need this at the *bottom* of the file in order to work for unknown reason md 05/30/16
