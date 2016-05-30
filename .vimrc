@@ -13,7 +13,6 @@ set hlsearch
 set incsearch
 set number
 " more3 mdd stuff - set tabs to be spaces and length of 2 characters.
-set smartindent
 set tabstop=2 " What the tab key does, i.e. 2 spaces instead of tab
 set shiftwidth=2 "What is used for indentation
 set expandtab
@@ -39,9 +38,9 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "what I use
 let mapleader = ","
 let loaded_matchparen = 1 " MDD Turn off matching bracket highlighting.
-filetype plugin indent on    " required
-filetype indent on
-filetype plugin on
+" filetype plugin indent on    " required
+" filetype indent on
+" filetype plugin on
 set hidden " Why is this not a default
 set lazyredraw " Don't update the display while executing macros
 set showmode " At least let yourself know what mode you're in
@@ -65,3 +64,4 @@ nnoremap <C-f> :!firefox %<CR> " browser preview with ctrl-o
 nnoremap <C-c> :!chromium-browser %<CR> " browser preview with ctrl-c
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_custom_ignore='/spec/fixtures/vcr_cassettes/'
+set autoindent
