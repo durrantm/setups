@@ -75,7 +75,7 @@ alias gl='git log'
 alias gl1='git log --oneline'
 alias glp='git log -p'
 alias glf='git log --name-status'
-alias gits='alias | grep "^alias g.*git.*$"'
+alias gits='alias | grep "^alias.*git.*$"'
 alias grm='git reset --hard origin/master'
 alias gfrm='git fetch; git reset --hard origin/master'
 # tmux
@@ -85,5 +85,6 @@ alias tf='tmux set -g mode-mouse off'
 alias se="cd ~/eq/selenium_IDE"
 alias eq="cd ~/eq/"
 alias ly="cd ~/eq/lynx"
+alias lyx="cd ~/eq; rm -rf lynx_old; mv lynx lynx_old; git clone git@github.com:adharmonics/lynx; cd lynx"
 # git aliases
 git config --global alias.comit 'commit -v'
