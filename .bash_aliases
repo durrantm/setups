@@ -55,17 +55,16 @@ alias bers='bundle exec rails server'
 alias work="cd $WORKBASE"
 # DropNot - NOT syncd !
 alias lnk="cd $WORKBASE_GIT/webs/rails_apps/linker"
-# git - general commands.  For other commands that need a branch name, use
-#       your ~/.gitconfig file as git aliases allow branch name tab completion
+# git
+alias gco='git checkout'
 alias gcom='git checkout master'
 alias gcob='git checkout -b '
 alias ga='git add '
-alias gd='git diff'
+alias gb='git branch'
 alias gc='git commit'
+alias gd='git diff'
 alias gca='git commit --amend'
-alias gcad='git commit -a' # Also adds files
-alias gcv='git commit -v' # This is a git alias for git -v commit (verbose)
-alias gcva='git commit -va' # git commit -v (verbose) and -a (adds files)
+alias gcv='git comit' # This is a git alias for git -v commit (verbose). Mispell intentional.
 alias gf='git fetch'
 alias gpull='git pull '
 alias gpush='git push '
