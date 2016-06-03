@@ -1,20 +1,16 @@
 [user]
-	email = m2@snap2web.com
 	name = Michael Durrant
-[core]
-	excludesfile = /home/durrantm/.gitignore_global
-	editor = vim -f
-[color]
-	ui = true
-[alias]
-	comit = commit -v
-	ci = commit -v
-  s = status
-  o = push origin master
-  h = push heroku master
-[diff]
-  tool = meld
-[merge]
-  tool = meld
+	email = m2@snap2web.com
 [push]
 	default = current
+[alias]
+  co = checkout
+  ci = commit -v
+	comit = commit -v
+[branch]
+	autosetuprebase = always
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[color]
+  ui = true
