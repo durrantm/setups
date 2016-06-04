@@ -31,6 +31,7 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+autocmd VimEnter * set ttymouse=xterm2
 " code folding settings below - Lets you type za to toggle folds!
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
