@@ -86,5 +86,6 @@ alias tf='tmux set -g mode-mouse off'
 alias se="cd ~/eq/selenium_IDE"
 alias eq="cd ~/eq/"
 alias ly="cd ~/eq/lynx"
+alias eqv="cd ~/Dropbox/everquote/"
 # git aliases
 git config --global alias.comit 'commit -v'
