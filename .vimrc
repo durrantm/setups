@@ -51,6 +51,7 @@ nmap <silent> ,ev :e $MYVIMRC<cr>
 " And to source this file as well (mnemonic for the key sequence is 's'ource 'v'imrc)
 nmap <silent> ,sv :so $MYVIMRC<cr>
 highlight ExtraWhitespace ctermbg=red guibg=red
+highlight Folded ctermbg=White ctermfg=Red
 set tags=./tags;
 set paste
 "Clear previous find highlighting by just typing \h while in a file.
