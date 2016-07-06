@@ -1,8 +1,5 @@
 alias eq='cd ~/eq'
-<<<<<<< HEAD
 alias eqd='cd ~/Dropbox/everquote'
-=======
->>>>>>> origin/master
 alias ly='cd ~/eq/lynx'
 alias pro='cd ~/eq/your_choice_rails'
 alias guides='cd ~/eq/guides'
