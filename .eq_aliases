@@ -1,5 +1,4 @@
 alias eq='cd ~/eq'
-alias eqd='cd ~/Dropbox/everquote'
 alias ly='cd ~/eq/lynx'
 alias pro='cd ~/eq/your_choice_rails'
 alias guides='cd ~/eq/guides'
