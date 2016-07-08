@@ -21,7 +21,7 @@ bup () {
     git merge origin/master
     git add $1
     git commit -m"$1 update"
-    git push origin master
+    git push -f origin master
     cp -v $1 ~
     cd -; } || echo "Error - no filename passed!"
   }
