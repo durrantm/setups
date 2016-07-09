@@ -4,7 +4,7 @@ WORKBASE_GIT="~/Dropnot"
 alias a='. ~/.bash_aliases'
 alias b="cd -"
 alias c="cd $WORKBASE/code"
-alias d="cd ~/Dropbox"
+alias d="~/Dropbox"
 alias e="cd $WORKBASE/code/sh__sed__awk/euler"
 alias f='git fetch'
 alias g='git status'
@@ -55,16 +55,18 @@ alias bers='bundle exec rails server'
 alias work="cd $WORKBASE"
 # DropNot - NOT syncd !
 alias lnk="cd $WORKBASE_GIT/webs/rails_apps/linker"
-# git
-alias gco='git checkout'
+# git - general commands.  For other commands that need a branch name, use
+#       your ~/.gitconfig file as git aliases allow branch name tab completion
 alias gcom='git checkout master'
 alias gcob='git checkout -b '
 alias ga='git add '
-alias gb='git branch'
-alias gc='git commit'
 alias gd='git diff'
-alias gca='git commit --amend -C HEAD'
-alias gcv='git comit' # This is a git alias for git -v commit (verbose). Mispell intentional.
+alias gc='git commit'
+alias gca='git commit -a' # Also adds files
+alias gcv='git commit -v' # This is a git alias for git -v commit (verbose)
+alias gcva='git commit -va' # git commit -v (verbose) and -a (adds files)
+alias gcam='git commit --amend'
+alias gcah='git commit --amend -C HEAD'
 alias gf='git fetch'
 alias gpull='git pull '
 alias gpush='git push '
@@ -75,7 +77,7 @@ alias gl='git log'
 alias gl1='git log --oneline'
 alias glp='git log -p'
 alias glf='git log --name-status'
-alias gits='alias | grep "^alias.*git.*$"'
+alias gits='alias | grep "^alias g.*git.*$"'
 alias grm='git reset --hard origin/master'
 alias gfrm='git fetch; git reset --hard origin/master'
 # tmux
@@ -85,6 +87,5 @@ alias tf='tmux set -g mode-mouse off'
 alias se="cd ~/eq/selenium_IDE"
 alias eq="cd ~/eq/"
 alias ly="cd ~/eq/lynx"
-alias lyx="cd ~/eq; rm -rf lynx_old; mv lynx lynx_old; git clone git@github.com:adharmonics/lynx; cd lynx"
 # git aliases
 git config --global alias.comit 'commit -v'
