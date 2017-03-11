@@ -21,6 +21,7 @@ alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
 # Two letter:
+alias ci='vi $(fzf)'
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
