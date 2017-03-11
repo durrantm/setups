@@ -9,7 +9,6 @@ alias e="cd $WORKBASE/code/sh__sed__awk/euler"
 alias f='git fetch'
 alias g='git status'
 alias h='history | tail -15'
-alias j='cd ~/eq/jasmine/jasmine-standalone-2.4.1/'
 alias l='ls -alFtrG'
 alias m="cd $WORKBASE_GIT/webs/michaeldurrant.com"
 alias n="cd $WORKBASE_GIT" # dropNot
