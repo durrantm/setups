@@ -1,6 +1,7 @@
 alias eq='cd ~/eq'
 alias eqd='cd ~/Dropbox/everquote'
 alias ly='cd ~/eq/lynx'
+alias lyl='cd ~/eq/lynx-life'
 alias pro='cd ~/eq/your_choice_rails'
 alias guides='cd ~/eq/guides'
 alias stagingdb='mysql -u lynx_read_only -p -h lynx-staging-db.adh8.com'
