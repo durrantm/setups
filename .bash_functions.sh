@@ -1,4 +1,4 @@
-cdc () {
+cdc() {
   for fn in "$@"; do
     for fn do
       if [[ "${fn##*/}" == .* ]]
@@ -15,13 +15,13 @@ md () {
 bup () {
   [ $# = 1 ] && {
     cp -v ~/$1 ~/Dropnot/setups
-    #install -D -v ~/$1 ~/Dropnot/setups/$1
+    #install -d -v ~/$1 ~/Dropnot/setups/$1   # attempt to avoid no dir issue
     cd ~/Dropnot/setups
     git fetch
     git merge origin/master
     git add $1
     git commit -m"$1 update"
-    git push -f origin master
+    git push origin master
     cp -v $1 ~
     cd -; } || echo "Error - no filename passed!"
   }
@@ -31,6 +31,3 @@ git_branch () {
 newalias() {
   echo "alias ${1}" >> $HOME/.bash_aliases; source ~/.bash_aliases;
   }
-diffit () {
-  colordiff $1 $2
-}
