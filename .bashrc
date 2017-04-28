@@ -16,12 +16,10 @@ PS1=$TIME$USER$HOST$LOCATION$BRANCH
 PS2='\[\033[01;36m\]>'
 set -o vi # vi at command line
 export EDITOR=vim
-export PATH="/usr/local/heroku/bin:$PATH" # Added by Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH" # Added by the Heroku Toolbelt
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/2014
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # friendly for non-text files
 [ ${BASH_VERSINFO[0]} -ge 4 ] && shopt -s autocd
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-eval "$(rbenv init -)"
+#[ `uname -s` != Linux ] && exec tmux
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$HOME/.node/bin:$PATH
-test -f tmux && tmux
