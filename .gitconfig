@@ -1,17 +1,12 @@
 [user]
 	name = Michael Durrant
 	email = m2@snap2web.com
-[push]
-	default = current
 [alias]
-  co = checkout
-  ci = commit -v
 	comit = commit -v
-  set-up = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+[push]
+	default = simple
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
 [core]
-	excludesfile = ~/.gitignore_global
-	editor = vim
-[color]
-  ui = true
+  excludesfile = /Users/durrantm/.gitignore_global
+  editor = vim
