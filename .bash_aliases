@@ -22,6 +22,7 @@ alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
 # Two letter:
 alias ci='vi $(fzf)'
+alias cly="cd $WORKBASE/code/ruby_rails/rails/everquote/lynx"
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
