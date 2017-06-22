@@ -1,5 +1,4 @@
 WORKBASE="~/Dropbox/92_2017/work"
-LIFEBASE="~/Dropbox/92_2017/life"
 WORKBASE_GIT="~/Dropnot"
 # One letter quickies:
 alias a='. ~/.bash_aliases'
@@ -56,7 +55,6 @@ alias ber='bundle exec rspec'
 alias bers='bundle exec rails server'
 # DropBox - syncd
 alias work="cd $WORKBASE"
-alias life="cd $LIFEBASE"
 # DropNot - NOT syncd !
 alias lnk="cd $WORKBASE_GIT/webs/rails_apps/linker"
 # git - general commands.  For other commands that need a branch name, use
