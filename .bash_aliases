@@ -32,6 +32,7 @@ alias wr='curl wttr.in'
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
 alias crr="cd $WORKBASE/code/ruby__rails/rails"
+alias ccc="cd $WORKBASE/code/javascript/react/learning_react_a_hands_on_guide"
 alias mvv='mv -iv'
 alias rmi='rm -i'
 alias rmv='rm -v'
