@@ -25,7 +25,7 @@ export PATH=$HOME/.node/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH" # For rbenv
 export JRE="/usr/local/jre1.8.0_131"
 export CATALINA_HOME="$HOME/Downloads/apache-tomcat-6.0.53"
-eval "$(rbenv init -)"
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -x  ~/.rbenv/ ] && `eval "$(rbenv init -)"`
+[ -x ~/.fzf.bash ] && source ~/.fzf.bash
 export NVM_DIR="/home/durrantm/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
