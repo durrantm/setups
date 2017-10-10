@@ -6,7 +6,6 @@ alias b="cd -"
 alias c="cd $WORKBASE/code"
 alias d="cd ~/Dropbox"
 alias e="cd $WORKBASE/code/sh__sed__awk/euler"
-alias f='git fetch'
 alias g='git status'
 alias h='history | tail -15'
 alias l='ls -alFtrG'
@@ -22,7 +21,6 @@ alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
 # Two letter:
 alias ci='vi $(fzf)'
-alias ly="cd $WORKBASE/code/ruby__rails/rails/everquote/lynx"
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
@@ -87,8 +85,5 @@ alias gfrm='git fetch; git reset --hard origin/master'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
-# everquote
-alias se="cd ~/eq/selenium_IDE"
-alias eq="cd ~/eq/"
 # git aliases
 git config --global alias.comit 'commit -v'
