@@ -5,7 +5,6 @@ alias a='. ~/.bash_aliases'
 alias b="cd -"
 alias c="cd $WORKBASE/code"
 alias d="cd ~/Dropbox"
-alias e="cd $WORKBASE/code/sh__sed__awk/euler"
 alias g='git status'
 alias h='history | tail -15'
 alias l='ls -alFtrG'
