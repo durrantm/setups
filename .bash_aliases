@@ -1,4 +1,4 @@
-WORKBASE="~/Dropbox/92_2017/work"
+WORKBASE="~/Dropbox/91_2018/work"
 WORKBASE_GIT="~/Dropnot"
 # One letter quickies:
 alias a='. ~/.bash_aliases'
