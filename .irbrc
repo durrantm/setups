@@ -4,3 +4,4 @@ require 'rubygems'
 #Wirble.colorize
 require 'pp' # Pretty print
 alias x exit # Same as my vim
+require 'irb/completion'
