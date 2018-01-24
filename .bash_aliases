@@ -28,6 +28,11 @@ alias la='ls -A'
 alias le='less '
 alias mv='mv -i'
 alias wr='curl wttr.in'
+# Docker
+alias di='docker image '
+alias dis='docker images'
+alias dc='docker container '
+alias dcs='docker container ls'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
