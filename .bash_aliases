@@ -66,6 +66,7 @@ alias work="cd $WORKBASE"
 alias lnk="cd $WORKBASE_GIT/webs/rails_apps/linker"
 # git - general commands.  For other commands that need a branch name, use
 #       your ~/.gitconfig file as git aliases allow branch name tab completion
+alias gco='git checkout '
 alias gcom='git checkout master'
 alias gcob='git checkout -b '
 alias ga='git add '
