@@ -2,9 +2,9 @@ WORKBASE="~/Dropbox/92_2017/work"
 WORKBASE_GIT="~/Dropnot"
 # One letter quickies:
 alias a='. ~/.bash_aliases'
-alias b="cd -"
+alias b='cd -'
 alias c="cd $WORKBASE/code"
-alias d="cd ~/Dropbox"
+alias d='cd ~/Dropbox'
 alias e="cd $WORKBASE/code/sh__sed__awk/euler"
 alias f='git fetch'
 alias g='git status'
@@ -15,7 +15,8 @@ alias n="cd $WORKBASE_GIT" # dropNot
 alias p='pwd'
 alias q="cd $WORKBASE/code/ruby__rails/ruby/ruby_quiz"
 alias r='rspec spec'
-alias s="cd $WORKBASE_GIT/setups"
+alias s='cd ~/code/SIT'
+alias S="cd $WORKBASE_GIT/setups"
 alias t='tmux'
 alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
@@ -66,7 +67,6 @@ alias work="cd $WORKBASE"
 alias lnk="cd $WORKBASE_GIT/webs/rails_apps/linker"
 # git - general commands.  For other commands that need a branch name, use
 #       your ~/.gitconfig file as git aliases allow branch name tab completion
-alias gco='git checkout '
 alias gcom='git checkout master'
 alias gcob='git checkout -b '
 alias ga='git add '
@@ -93,8 +93,5 @@ alias gfrm='git fetch; git reset --hard origin/master'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
-# everquote
-alias se="cd ~/eq/selenium_IDE"
-alias eq="cd ~/eq/"
 # git aliases
 git config --global alias.comit 'commit -v'
