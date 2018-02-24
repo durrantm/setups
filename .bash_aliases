@@ -72,6 +72,7 @@ alias gcob='git checkout -b '
 alias ga='git add '
 alias gd='git diff'
 alias gc='git commit'
+alias gdo='git diff ORIG_HEAD'
 alias gca='git commit -a' # Also adds files
 alias gcv='git commit -v' # This is a git alias for git -v commit (verbose)
 alias gcva='git commit -va' # git commit -v (verbose) and -a (adds files)
