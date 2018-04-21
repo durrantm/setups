@@ -3,6 +3,7 @@
 	email = m2@snap2web.com
 [alias]
 	comit = commit -v
+	co = checkout
 [push]
 	default = simple
 [branch]
