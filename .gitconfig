@@ -5,9 +5,9 @@
 	comit = commit -v
 	co = checkout
 [push]
-	default = simple
+	default = current
 [branch]
   autosetuprebase = always
 [core]
-	excludesfile = /home/durrantm/.gitignore_global
+	excludesfile = ~/.gitignore_global
   editor = vim
