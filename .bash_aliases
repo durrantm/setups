@@ -1,10 +1,10 @@
-WORKBASE="~/Dropbox/92_2017/work"
+WORKBASE="~/Dropbox/91_2018/work"
 WORKBASE_GIT="~/Dropnot"
 # One letter quickies:
 alias a='. ~/.bash_aliases'
-alias b='cd -'
+alias b="cd -"
 alias c="cd $WORKBASE/code"
-alias d='cd ~/Dropbox'
+alias d="cd ~/Dropbox"
 alias e="cd $WORKBASE/code/sh__sed__awk/euler"
 alias f='git fetch'
 alias g='git status'
@@ -15,25 +15,23 @@ alias n="cd $WORKBASE_GIT" # dropNot
 alias p='pwd'
 alias q="cd $WORKBASE/code/ruby__rails/ruby/ruby_quiz"
 alias r='rspec spec'
-alias s='cd ~/code/SIT-UIAutomation-OLA'
-alias S="cd $WORKBASE_GIT/setups"
+alias s="cd $WORKBASE_GIT/setups"
 alias t='tmux'
 alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
 # Two letter:
 alias ci='vi $(fzf)'
+alias di='docker image'
+alias dis='docker images'
+alias dc='docker container'
+alias dcs='docker container ls'
 alias ly="cd $WORKBASE/code/ruby__rails/rails/everquote/lynx"
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
 alias mv='mv -i'
 alias wr='curl wttr.in'
-# Docker
-alias di='docker image '
-alias dis='docker images'
-alias dc='docker container '
-alias dcs='docker container ls'
 # Other:
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
@@ -51,9 +49,6 @@ alias cprv='cp -rv'
 alias lsd='ls -Fd .*'
 alias lsd1='ls -d1 '
 alias ldl='ls -d1'
-# Sallie Mae
-alias ola='cd ~/code/automate_cerberus_sit_ola'
-alias ols='cd ~/code/automate_cerberus_sit_ols'
 alias play='cd ~/play/'
 alias please='sudo $(history -p !!)'
 alias grep='grep --color=auto'
@@ -75,7 +70,6 @@ alias gcob='git checkout -b '
 alias ga='git add '
 alias gd='git diff'
 alias gc='git commit'
-alias gdo='git diff ORIG_HEAD'
 alias gca='git commit -a' # Also adds files
 alias gcv='git commit -v' # This is a git alias for git -v commit (verbose)
 alias gcva='git commit -va' # git commit -v (verbose) and -a (adds files)
@@ -97,5 +91,8 @@ alias gfrm='git fetch; git reset --hard origin/master'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
+# everquote
+alias se="cd ~/eq/selenium_IDE"
+alias eq="cd ~/eq/"
 # git aliases
 git config --global alias.comit 'commit -v'
