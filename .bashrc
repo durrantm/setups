@@ -1,7 +1,7 @@
 HISTCONTROL=ignoreboth:erasedups HISTSIZE=100000 HISTFILESIZE=200000
 shopt -s histappend checkwinsize
 PROMPT_COMMAND='history -a'
-git_branch () { :; }
+git_branch () { :; } # Prevent error if bash_functions not available
 test -f ~/.bash_functions.sh && . $_
 test -f ~/.bash_aliases && . $_
 test -f ~/.git-completion.bash && . $_
