@@ -1,6 +1,7 @@
 HISTCONTROL=ignoreboth:erasedups HISTSIZE=100000 HISTFILESIZE=200000
 shopt -s histappend checkwinsize
 PROMPT_COMMAND='history -a'
+git_branch () { :; }
 test -f ~/.bash_functions.sh && . $_
 test -f ~/.bash_aliases && . $_
 test -f ~/.git-completion.bash && . $_
@@ -20,10 +21,11 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/20
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # friendly for non-text files
 [ ${BASH_VERSINFO[0]} -ge 4 ] && shopt -s autocd
 #[ `uname -s` != Linux ] && exec tmux
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$HOME/.node/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH" # For rbenv
 export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/usr/local/bin"
 export JRE="/usr/local/jre1.8.0_131"
 export CATALINA_HOME="$HOME/Downloads/apache-tomcat-6.0.53"
 [ -x  ~/.rbenv/ ] && eval "$(rbenv init -)"
