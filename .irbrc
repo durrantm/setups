@@ -1,3 +1,6 @@
+alias x exit
 require 'pp'
 require 'irb/completion'
-alias x exit
+require 'irbtools'
+require 'colorize'
+alias c colorize
