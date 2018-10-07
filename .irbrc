@@ -1,3 +1,3 @@
-require 'pp' # Pretty print
+require 'pp'
 require 'irb/completion'
-alias x exit # Same as my vim
+alias x exit
