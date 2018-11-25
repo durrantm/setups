@@ -13,6 +13,12 @@ md () {
   [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!"
   }
 bup () {
+  if [[ ! -f ~/$1 ]]
+    then
+      echo "Error - file does not exist"
+      return
+  fi
+  FileExists ~/$1 && exit
   [ $# = 1 ] && {
     cp -v ~/$1 ~/Dropnot/setups
     #install -d -v ~/$1 ~/Dropnot/setups/$1   # attempt to avoid no dir issue
