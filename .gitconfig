@@ -4,6 +4,7 @@
 [alias]
 	comit = commit -v
 	co = checkout
+	cob = checkout -b
 [push]
 	default = current
 [branch]
