@@ -31,4 +31,4 @@ export CATALINA_HOME="$HOME/Downloads/apache-tomcat-6.0.53"
 [ -x ~/.fzf.bash ] && source ~/.fzf.bash
 export NVM_DIR="/home/durrantm/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ `uname -s` == Linux ] && tmux
+#[ `uname -s` == Linux ] && tmux
