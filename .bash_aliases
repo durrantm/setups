@@ -20,6 +20,7 @@ alias t='tmux'
 alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
+alias z='git add . && git commit -m"fix" && git push'
 # Two letter:
 alias ci='vi $(fzf)'
 alias di='docker image'
