@@ -1,3 +1,4 @@
+" temp comment
 if has('mouse')
   set mouse=a
   if &term =~ "xterm" || &term =~ "screen"
@@ -35,6 +36,7 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+autocmd FileType md match none
 " code folding settings below - Lets you type za to toggle folds!
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
@@ -66,4 +68,5 @@ set ruler " MDD Show current x-y in status bar
 nnoremap <C-g> :!google-chrome %<CR> " browser preview with ctrl-p
 nnoremap <C-f> :!firefox %<CR> " browser preview with ctrl-o
 nnoremap <C-c> :!chromium-browser %<CR> " browser preview with ctrl-c
+nnoremap <F2> :set number!<CR> " toggle line numbers with F2
 set runtimepath^=~/.vim/bundle/ctrlp.vim
