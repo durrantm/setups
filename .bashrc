@@ -27,6 +27,8 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/usr/local/bin"
 export JRE="/usr/local/jre1.8.0_131"
 export CATALINA_HOME="$HOME/Downloads/apache-tomcat-6.0.53"
+export BS_U='michaeldurrant3'
+export BS_P='xpVH9NPWHJQLZdR1mbgq'
 [ -x  ~/.rbenv/ ] && eval "$(rbenv init -)"
 [ -x ~/.fzf.bash ] && source ~/.fzf.bash
 export NVM_DIR="/home/durrantm/.nvm"
