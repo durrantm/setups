@@ -20,20 +20,19 @@ alias t='tmux'
 alias v='vim .'
 alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
-alias z='git add . && git commit -m"fix" && git push'
 # Two letter:
 alias ci='vi $(fzf)'
 alias di='docker image'
 alias dis='docker images'
 alias dc='docker container'
 alias dcs='docker container ls'
-alias ly="cd $WORKBASE/code/ruby__rails/rails/everquote/lynx"
 alias hg='history | tail -200 | grep -i'
 alias la='ls -A'
 alias le='less '
 alias mv='mv -i'
 alias wr='curl wttr.in'
 # Other:
+alias rub="cd $WORKBASE/code/ruby__rails/ruby/"
 alias fix='git commit -m"fix" && git push'
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
