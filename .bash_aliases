@@ -34,6 +34,7 @@ alias sl="cd $WORKBASE/code/ruby__rails/ruby/slack"
 alias mv='mv -i'
 alias wr='curl wttr.in'
 # Other:
+alias rub="cd $WORKBASE/code/ruby__rails/ruby"
 alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[    ;&|]\s*alert$//'\'')"'
 alias hga='history | grep -i' # All history
 alias crr="cd $WORKBASE/code/ruby__rails/rails"
