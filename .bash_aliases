@@ -60,6 +60,7 @@ alias please='sudo $(history -p !!)'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+alias awscli="cd $WORKBASE/aws"
 # Rails
 alias rc='rails console'
 alias rs='rails server'
