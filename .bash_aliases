@@ -22,6 +22,7 @@ alias w="cd $WORKBASE_GIT/webs"
 alias x='exit'
 alias z='git add . && git commit -m"fix" && git push'
 # Two letter:
+alias aw="cd $WORKBASE/aws"
 alias ci='vi $(fzf)'
 alias di='docker image'
 alias dis='docker images'
