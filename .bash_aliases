@@ -25,6 +25,7 @@ alias z='git add . && git commit -m"fix" && git push'
 alias aw="cd $WORKBASE/aws"
 alias aw1="cd $WORKBASE/aws/m1@snap2web.com"
 alias awm="cd $WORKBASE/aws/m1@snap2web.com/Michael"
+alias awc="cd $WORKBASE/aws/m1@snap2web.com/Michael/cli_scripts"
 alias ci='vi $(fzf)'
 alias di='docker image'
 alias dis='docker images'
