@@ -66,6 +66,7 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias cda="cd $WORKBASE/aws"
+alias python='python3'
 # Rails
 alias rc='rails console'
 alias rs='rails server'
