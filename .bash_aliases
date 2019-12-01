@@ -15,7 +15,6 @@ alias s="cd ~/Dropnot/setups"
 alias t='tmux'
 alias v='vim .'
 alias x='exit'
-alias z='git add . && git commit -m"fix" && git push'
 # Two letter:
 alias aw="cd $CODE/aws"
 alias awm="cd $AWS_MICHAEL_CODE"
@@ -34,7 +33,7 @@ alias le='less '
 alias mv='mv -i'
 # Other:
 alias rub="cd $CODE/ruby/"
-alias fix='git commit -m"fix" && git push'
+alias fix='git add . && git commit -m"fix" && git push'
 alias hga='history | grep -i' # All history
 alias mvv='mv -iv'
 alias rmi='rm -i'
@@ -43,9 +42,7 @@ alias rmiv='rm -iv'
 alias rmd='rmdir '
 alias hon='shopt -s histverify' # For scrolling back
 alias hof='shopt -u histverify'
-alias cpr='cp -r'
-alias cpv='cp -v'
-alias cprv='cp -rv'
+alias cp='cp -v'
 alias play='cd ~/play/'
 alias please='sudo $(history -p !!)'
 alias grep='grep --color=auto'
@@ -82,4 +79,4 @@ alias tf='tmux set -g mode-mouse off'
 git config --global alias.comit 'commit -v'
 git config --global alias.co 'checkout'
 git config --global alias.cob 'checkout -b'
-git config --global alias.set-upstream '!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`'
+git config --global alias.setups '!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`'
