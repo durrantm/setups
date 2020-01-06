@@ -23,6 +23,7 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/20
 #[ `uname -s` != Linux ] && exec tmux
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$HOME/.node/bin:$PATH
+export PATH=./node_modules/.bin:${PATH}
 export PATH="$HOME/.rbenv/bin:$PATH" # For rbenv
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/usr/local/bin"
