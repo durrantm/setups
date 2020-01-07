@@ -23,6 +23,7 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/20
 #[ `uname -s` != Linux ] && exec tmux
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$HOME/.node/bin:$PATH
+export PATH=./node_modules/.bin:${PATH}
 export PATH="$HOME/.rbenv/bin:$PATH" # For rbenv
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/usr/local/bin"
@@ -32,3 +33,7 @@ export CATALINA_HOME="$HOME/Downloads/apache-tomcat-6.0.53"
 [ -x ~/.fzf.bash ] && source ~/.fzf.bash
 export NVM_DIR="/home/durrantm/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
+test nvm && nvm use > /dev/null
+test -f ~/set_aws_credentials.sh && . $_
