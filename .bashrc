@@ -23,7 +23,6 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages/ # for meld mdd 4/19/20
 #[ `uname -s` != Linux ] && exec tmux
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$HOME/.node/bin:$PATH
-export PATH=~/.npm-global/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH" # For rbenv
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/usr/local/bin"
@@ -31,10 +30,5 @@ export JRE="/usr/local/jre1.8.0_131"
 export CATALINA_HOME="$HOME/Downloads/apache-tomcat-6.0.53"
 [ -x  ~/.rbenv/ ] && eval "$(rbenv init -)"
 [ -x ~/.fzf.bash ] && source ~/.fzf.bash
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/michael/.sdkman"
-[[ -s "/home/michael/.sdkman/bin/sdkman-init.sh" ]] && source "/home/michael/.sdkman/bin/sdkman-init.sh"
+export NVM_DIR="/home/durrantm/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
