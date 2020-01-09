@@ -73,3 +73,4 @@ nnoremap <C-f> :!firefox %<CR> " browser preview with ctrl-o
 nnoremap <C-c> :!chromium-browser %<CR> " browser preview with ctrl-c
 nnoremap <F2> :set number!<CR> " toggle line numbers with F2
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
