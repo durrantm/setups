@@ -35,5 +35,5 @@ export NVM_DIR="/home/durrantm/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
-test nvm && nvm use > /dev/null
+test nvm && nvm use 12 > /dev/null
 test -f ~/set_aws_credentials.sh && . $_
