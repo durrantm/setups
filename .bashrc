@@ -11,7 +11,7 @@ ls --color=al > /dev/null 2>&1 && alias ls='ls -F --color=al' || alias ls='ls -G
 HOST='\[\033[02;36m\]\h'; HOST=' '$HOST
 TIME='\[\033[01;31m\]\t \[\033[01;32m\]'
 DATE='\[\033[01;31m\]\d \[\033[01;32m\]'
-YEAR='\[\033[01;31m\]\D{%F} \[\033[01;32m\]'
+YEAR='\[\033[01;31m\]\D{%Y} \[\033[01;32m\]'
 LOCATION=' \[\033[01;34m\]`pwd | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g"`'
 [ `type -t git_branch` == 'function' ] && BRANCH=' \[\033[00;33m\]$(git_branch)\[\033[00m\]\n\$ ' || BRANCH=' \[\033[00;33m\] \[\033[00m\]\n\$ ' 
 PS1=$TIME$DATE$YEAR$USER$HOST$LOCATION$BRANCH
