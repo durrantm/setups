@@ -24,9 +24,6 @@ alias x='exit'
 alias z='git add . && git commit -m"fix" && git push'
 # Two letter:
 alias aw="cd $WORKBASE/aws"
-alias aw1="cd $WORKBASE/aws/m1@snap2web.com"
-alias awm="cd $WORKBASE/aws/m1@snap2web.com/Michael"
-alias awc="cd $WORKBASE/aws/m1@snap2web.com/Michael/cli_scripts"
 alias ci='vi $(fzf)'
 alias di='docker image'
 alias dis='docker images'
@@ -39,6 +36,10 @@ alias sl="cd $WORKBASE/code/ruby__rails/ruby/slack"
 alias mv='mv -i'
 alias wr='curl wttr.in'
 # Other:
+alias js2='cd ~/Dropnot/code/js'
+alias aw1="cd $WORKBASE/aws/m1@snap2web.com"
+alias awm="cd $WORKBASE/aws/m1@snap2web.com/Michael"
+alias awc="cd $WORKBASE/aws/m1@snap2web.com/Michael/cli_scripts"
 alias gitadddot='git add .'
 alias gitcomfix="git commit -m'fix'"
 alias rub="cd $WORKBASE/code/ruby__rails/ruby/"
