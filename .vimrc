@@ -9,7 +9,7 @@ if has('mouse')
 endif
 :color ron
 " mdd specific stuff --- start
-au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
+autocmd BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 if findfile("~/.vim/autoload")
   execute pathogen#infect()
 endif
@@ -49,6 +49,7 @@ let loaded_matchparen = 1 " MDD Turn off matching bracket highlighting.
 filetype indent on
 filetype plugin on
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 set hidden " Why is this not a default
 set lazyredraw " Don't update the display while executing macros
 set showmode " At least let yourself know what mode you're in
