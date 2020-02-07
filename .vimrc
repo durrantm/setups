@@ -13,6 +13,7 @@ autocmd BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 if findfile("~/.vim/autoload")
   execute pathogen#infect()
 endif
+let g:prettier#autoformat = 1
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set hlsearch
 set incsearch
