@@ -50,6 +50,7 @@ alias hga='history | grep -i' # All history
 alias crr="cd $WORKBASE/code/ruby__rails/rails"
 alias ccc="cd $WORKBASE/code/javascript/react/learning_react_a_hands_on_guide"
 alias mvv='mv -iv'
+alias nis='npm install --save-dev'
 alias rmi='rm -i'
 alias rmv='rm -v'
 alias rmiv='rm -iv'
