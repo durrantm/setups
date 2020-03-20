@@ -1,4 +1,4 @@
-WORKBASE="~/Dropbox/90_2020/work"
+WORKBASE="~/Dropbox/89_2020/work"
 WORKBASE_GIT="~/Dropnot"
 WORKBASE_CODE="~/Dropnot/code"
 # One letter quickies:
