@@ -13,6 +13,7 @@ autocmd BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 if findfile("~/.vim/autoload")
   execute pathogen#infect()
 endif
+let g:prettier#autoformat = 1
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set hlsearch
 set incsearch
@@ -50,6 +51,7 @@ filetype indent on
 filetype plugin on
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+set ts=2 sw=2 expandtab
 set hidden " Why is this not a default
 set lazyredraw " Don't update the display while executing macros
 set showmode " At least let yourself know what mode you're in
@@ -72,4 +74,6 @@ nnoremap <C-g> :!google-chrome %<CR> " browser preview with ctrl-p
 nnoremap <C-f> :!firefox %<CR> " browser preview with ctrl-o
 nnoremap <C-c> :!chromium-browser %<CR> " browser preview with ctrl-c
 nnoremap <F2> :set number!<CR> " toggle line numbers with F2
+command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
+command! -bang Q quit<bang>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
