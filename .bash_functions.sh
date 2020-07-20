@@ -36,3 +36,6 @@ git_branch () {
 newalias() {
   echo "alias ${1}" >> $HOME/.bash_aliases; source ~/.bash_aliases;
   }
+cpnn () {
+  mkdir ~/$1; cp -r !(node_modules) ~/$1/;
+}
