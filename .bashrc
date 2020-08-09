@@ -33,7 +33,7 @@ export JRE="/usr/local/jre1.8.0_131"
 export CATALINA_HOME="$HOME/Downloads/apache-tomcat-6.0.53"
 [ -x  ~/.rbenv/ ] && eval "$(rbenv init -)"
 [ -x ~/.fzf.bash ] && source ~/.fzf.bash
-export NVM_DIR="/home/durrantm/.nvm"
+test -d $HOME/.nvm && export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
