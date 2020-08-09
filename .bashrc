@@ -39,3 +39,4 @@ export NVM_DIR="/home/durrantm/.nvm"
 [ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
 test nvm && nvm use 14 > /dev/null
 test -f ~/set_aws_credentials.sh && . $_
+test -f ~/.keys && . $_
