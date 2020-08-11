@@ -31,6 +31,7 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/usr/local/bin"
 export JRE="/usr/local/jre1.8.0_131"
 export CATALINA_HOME="$HOME/Downloads/apache-tomcat-6.0.53"
+export BASH_SILENCE_DEPRECATION_WARNING=1
 [ -x  ~/.rbenv/ ] && eval "$(rbenv init -)"
 [ -x ~/.fzf.bash ] && source ~/.fzf.bash
 test -d $HOME/.nvm && export NVM_DIR="$HOME/.nvm"
