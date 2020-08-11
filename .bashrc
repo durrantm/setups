@@ -34,9 +34,10 @@ export CATALINA_HOME="$HOME/Downloads/apache-tomcat-6.0.53"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 [ -x  ~/.rbenv/ ] && eval "$(rbenv init -)"
 [ -x ~/.fzf.bash ] && source ~/.fzf.bash
-test -d $HOME/.nvm && export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="/home/durrantm/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
 test nvm && nvm use 14 > /dev/null
 test -f ~/set_aws_credentials.sh && . $_
+test -f ~/.keys && . $_
