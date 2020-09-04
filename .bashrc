@@ -4,6 +4,7 @@ PROMPT_COMMAND='history -a'
 git_branch () { :; } # Prevent error if bash_functions not available
 test -f ~/.bash_functions.sh && . $_
 test -f ~/.bash_aliases && . $_
+test -f ~/.bash_secrets && . $_
 test -f ~/.git-completion.bash && . $_
 test -f /etc/bash_completion && ! shopt -oq posix && . /etc/bash_completion
 test -f ~/.autojump/etc/profile.d/autojump.sh && . $_
