@@ -37,6 +37,7 @@ alias mv='mv -i'
 alias wr='curl wttr.in'
 # Other:
 alias js2='cd ~/Dropnot/code/js'
+alias nrd="npm run deploy"
 alias aw1="cd $WORKBASE/aws/m1@snap2web.com"
 alias awm="cd $WORKBASE/aws/m1@snap2web.com/Michael"
 alias awc="cd $WORKBASE/aws/m1@snap2web.com/Michael/cli_scripts"
