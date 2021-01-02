@@ -72,6 +72,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias cda="cd $WORKBASE/aws"
 alias python='python3'
+alias gitup='git add .; git commit -m"Add and merge branch changes to master"; git co master; git merge -;'
 # Rails
 alias rc='rails console'
 alias rs='rails server'
