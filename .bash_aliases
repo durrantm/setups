@@ -1,4 +1,4 @@
-WORKBASE="~/Dropbox/89_2020/work"
+WORKBASE="~/Dropbox/88_2021/work"
 WORKBASE_GIT="~/Dropnot"
 WORKBASE_CODE="~/Dropnot/code"
 # One letter quickies:
@@ -110,8 +110,5 @@ alias gfrm='git fetch; git reset --hard origin/master'
 # tmux
 alias tn='tmux set -g mode-mouse on'
 alias tf='tmux set -g mode-mouse off'
-# everquote
-alias se="cd ~/eq/selenium_IDE"
-alias eq="cd ~/eq/"
 # git aliases
 git config --global alias.comit 'commit -v'
