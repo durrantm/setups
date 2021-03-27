@@ -86,6 +86,7 @@ alias lnk="cd $WORKBASE_GIT/webs/rails_apps/linker"
 #       your ~/.gitconfig file as git aliases allow branch name tab completion
 alias gcom='git checkout master'
 alias gcob='git checkout -b '
+alias gboom='git fetch;git checkout master;git pull'
 alias ga='git add '
 alias gd='git diff'
 alias gc='git commit'
