@@ -88,6 +88,7 @@ alias gcom='git checkout master'
 alias gcob='git checkout -b '
 alias gboom='git fetch;git checkout master;git pull'
 alias ga='git add '
+alias gb='git branch'
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a' # Also adds files
