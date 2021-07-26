@@ -4,7 +4,6 @@ PROMPT_COMMAND='history -a'
 git_branch () { :; } # Prevent error if bash_functions not available
 test -f ~/.bash_functions.sh && . $_
 test -f ~/.bash_aliases && . $_
-test -f ~/.bash_secrets && . $_
 test -f ~/.git-completion.bash && . $_
 test -f /etc/bash_completion && ! shopt -oq posix && . /etc/bash_completion
 test -f ~/.autojump/etc/profile.d/autojump.sh && . $_
@@ -32,13 +31,11 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/usr/local/bin"
 export JRE="/usr/local/jre1.8.0_131"
 export CATALINA_HOME="$HOME/Downloads/apache-tomcat-6.0.53"
-export BASH_SILENCE_DEPRECATION_WARNING=1
 [ -x  ~/.rbenv/ ] && eval "$(rbenv init -)"
 [ -x ~/.fzf.bash ] && source ~/.fzf.bash
 export NVM_DIR="/home/durrantm/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
-test nvm && nvm use 14 > /dev/null
+test nvm && nvm use 16 > /dev/null
 test -f ~/set_aws_credentials.sh && . $_
-test -f ~/.keys && . $_
