@@ -31,6 +31,16 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/usr/local/bin"
 export JRE="/usr/local/jre1.8.0_131"
 export CATALINA_HOME="$HOME/Downloads/apache-tomcat-6.0.53"
+export REACT_APP_FIREBASE_API_KEY="AIzaSyDhUQ5b3Y65JzQAqGOX-ocEZxATdWOm7tU"
+export REACT_APP_FIREBASE_AUTH_DOMAIN="thedeiscorecard.firebaseapp.com"
+export REACT_APP_FIREBASE_PROJECT_ID="thedeiscorecard"
+export REACT_APP_FIREBASE_STORAGE_BUCKET="thedeiscorecard.appspot.com"
+export REACT_APP_FIREBASE_MESSAGING_SENDER_ID="890885040645"
+export REACT_APP_FIREBASE_APP_ID="1:890885040645:web:64c2db6306ecc265874a6c"
+export REACT_APP_FIREBASE_MEASUREMENT_ID="G-J834Y2RRMV"
+export REACT_APP_GOOGLE_PROJECT="https://googletagmanager.com/gtag/js?id=G-TCLTJ9P48E"
+export CYPRESS_DEI_LOGIN_USERNAME="marius@gmail.com"
+export CYPRESS_DEI_LOGIN_PWD="marius"
 [ -x  ~/.rbenv/ ] && eval "$(rbenv init -)"
 [ -x ~/.fzf.bash ] && source ~/.fzf.bash
 export NVM_DIR="/home/durrantm/.nvm"
@@ -39,3 +49,4 @@ export NVM_DIR="/home/durrantm/.nvm"
 [ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
 test nvm && nvm use 16 > /dev/null
 test -f ~/set_aws_credentials.sh && . $_
+test tmux && tmux
