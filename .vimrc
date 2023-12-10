@@ -7,13 +7,13 @@ if has('mouse')
     autocmd BufEnter * set ttymouse=xterm2
   endif
 endif
-:color ron
+" :color ron
 " mdd specific stuff --- start
 autocmd BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 if findfile("~/.vim/autoload")
   execute pathogen#infect()
 endif
-let g:prettier#autoformat = 1
+" let g:prettier#autoformat = 1
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set hlsearch
 set incsearch
@@ -32,12 +32,12 @@ set nocompatible
 " Get that filetype stuff happening
 if system("uname") == "Linux" 
   set filetype off
-  match ExtraWhitespace /\s\+$/
+  " match ExtraWhitespace /\s\+$/
 endif
-syntax on " Turn on syntax highlighting
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+" syntax on " Turn on syntax highlighting
+" autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+" autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+" autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 autocmd FileType md match none
 " code folding settings below - Lets you type za to toggle folds!
@@ -45,8 +45,8 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "what I use
-let mapleader = ","
-let loaded_matchparen = 1 " MDD Turn off matching bracket highlighting.
+" let mapleader = ","
+" let loaded_matchparen = 1 " MDD Turn off matching bracket highlighting.
 filetype indent on
 filetype plugin on
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
