@@ -15,7 +15,8 @@ YEAR='\[\033[01;31m\]\D{%Y} \[\033[01;32m\]'
 LOCATION=' \[\033[01;34m\]`pwd | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g"`'
 [ `type -t git_branch` == 'function' ] && BRANCH=' \[\033[00;33m\]$(git_branch)\[\033[00m\]\n\$ ' || BRANCH=' \[\033[00;33m\] \[\033[00m\]\n\$ ' 
 PS1=$TIME$DATE$YEAR$USER$HOST$LOCATION$BRANCH
-PS2='\[\033[01;36m\]>'
+# PS2='\[\033[01;36m\]>'
+PS2='\[\033[01;36m'
 set -o vi # vi at command line
 export EDITOR=vim
 export PATH="/usr/local/heroku/bin:$PATH" # Added by the Heroku Toolbelt
@@ -49,4 +50,4 @@ export NVM_DIR="/home/durrantm/.nvm"
 [ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
 test nvm && nvm use 16 > /dev/null
 test -f ~/set_aws_credentials.sh && . $_
-test tmux && tmux
+# test tmux && tmux
